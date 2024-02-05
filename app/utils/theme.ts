@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import { useTheme } from "next-themes";
 
 export const ColorModeContext = React.createContext({
   toggleColorMode: () => {},
@@ -9,6 +10,7 @@ export const useColorMode = () => {
   const isDark = false;
   const userPref = isDark || typeof isDark == undefined ? "dark" : "light";
   const [mode, setMode] = React.useState<"light" | "dark">(userPref);
+  const { theme, setTheme } = useTheme();
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -27,7 +29,8 @@ export const useColorMode = () => {
     else if (lhmode) setMode(lhmode == "light" ? "light" : "dark");
     else setMode(w.matches ? "dark" : "light");
   }, []);
-  return {colorMode, mode};
+  setTheme(mode);
+  return colorMode;
 };
 
 export const nextTheme = {
