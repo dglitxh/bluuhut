@@ -13,6 +13,7 @@ import {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [activeLink, setActiveLink] = React.useState(0)
 
   const menuItems = [
     "Profile",
@@ -21,10 +22,6 @@ export default function App() {
     "Analytics",
     "System",
     "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
   ];
 
   return (
@@ -41,7 +38,24 @@ export default function App() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
+        {menuItems.map((item, index) => (
+          <NavbarItem key={`${item}-${index}`}>
+            <Link
+              color={
+                index + 1 === activeLink
+                  ? "primary"
+                  : "foreground"
+              }
+              className="w-full"
+              href="#"
+              size="lg"
+              onPress={() => setActiveLink(index + 1)}
+            >
+              {item}
+            </Link>
+          </NavbarItem>
+        ))}
+        {/* <NavbarItem>
           <Link color="foreground" href="#">
             Features
           </Link>
@@ -55,7 +69,7 @@ export default function App() {
           <Link color="foreground" href="#">
             Integrations
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
@@ -72,15 +86,14 @@ export default function App() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={
-                index === 2
+                index + 1 === activeLink
                   ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
                   : "foreground"
               }
               className="w-full"
               href="#"
               size="lg"
+              onPress={() => setActiveLink(index + 1)}
             >
               {item}
             </Link>
