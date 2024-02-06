@@ -37,6 +37,9 @@ export default function App() {
           {/* Logo goes here */}
           <p className="font-bold text-xl">BlueHut</p>
         </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {Object.keys(menuItems).map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
             <Link
@@ -51,24 +54,6 @@ export default function App() {
           </NavbarItem>
         ))}
       </NavbarContent>
-
-      {/* <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent> */}
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
