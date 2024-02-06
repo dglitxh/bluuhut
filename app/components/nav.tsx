@@ -13,16 +13,18 @@ import {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [activeLink, setActiveLink] = React.useState(0)
+  const [activeLink, setActiveLink] = React.useState(0);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-  ];
+  type MenuType = {
+    [key: string]: string;
+  };
+  const menuItems: MenuType = {
+    Home: "/#",
+    About: "/#about",
+    Services: "/#services",
+    Pricing: "/#pricing",
+    Contact: "/#contact",
+  };
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -33,21 +35,14 @@ export default function App() {
         />
         <NavbarBrand>
           {/* Logo goes here */}
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-xl">BlueHut</p>
         </NavbarBrand>
-      </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {menuItems.map((item, index) => (
+        {Object.keys(menuItems).map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
             <Link
-              color={
-                index + 1 === activeLink
-                  ? "primary"
-                  : "foreground"
-              }
+              color={index + 1 === activeLink ? "primary" : "foreground"}
               className="w-full"
-              href="#"
+              href={menuItems[item]}
               size="lg"
               onPress={() => setActiveLink(index + 1)}
             >
@@ -55,7 +50,10 @@ export default function App() {
             </Link>
           </NavbarItem>
         ))}
-        {/* <NavbarItem>
+      </NavbarContent>
+
+      {/* <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
           <Link color="foreground" href="#">
             Features
           </Link>
@@ -69,8 +67,8 @@ export default function App() {
           <Link color="foreground" href="#">
             Integrations
           </Link>
-        </NavbarItem> */}
-      </NavbarContent>
+        </NavbarItem>
+      </NavbarContent> */}
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
@@ -82,18 +80,17 @@ export default function App() {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
+        {Object.keys(menuItems).map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index + 1 === activeLink
-                  ? "primary"
-                  : "foreground"
-              }
+              color={index + 1 === activeLink ? "primary" : "foreground"}
               className="w-full"
-              href="#"
+              href={menuItems[item]}
               size="lg"
-              onPress={() => setActiveLink(index + 1)}
+              onPress={() => {
+                setActiveLink(index + 1);
+                setIsMenuOpen(false);
+              }}
             >
               {item}
             </Link>
