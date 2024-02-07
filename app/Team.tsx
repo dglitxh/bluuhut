@@ -11,15 +11,15 @@ interface TeamMemberProps {
 
 const teamMembers = [
   {
-    name: 'Arthur Melo',
-    role: 'Design Director',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est.',
+    name: 'Raphael Kwadwo Aninakwa',
+    role: 'Managing Director (MD)',
+    description: 'Raphael Kwadwo Aninakwa is the dynamic leader at the helm of our company`s` journey. With over seven years of invaluable experience in [industry/field], he brings a wealth of knowledge and a visionary outlook to our team. Raphael is dedicated to propelling our company forward with innovation, strategic direction, and a steadfast commitment to excellence.',
     image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
   },
   {
-    name: 'Olivia Wathan',
-    role: 'Lead Designer',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est.',
+    name: 'kaytee',
+    role: 'Chief Operations Officer (COO)',
+    description: 'Kaytee, our COO, brings nine years of invaluable experience to our executive team. As a male leader, he is instrumental in optimizing our operational processes to maximize efficiency and productivity. With a track record of streamlining workflows and implementing strategic initiatives, Kaytee plays a crucial role in driving the day-to-day operations of our firm.',
     image: 'https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
   },
   // Add more team members as needed
@@ -27,7 +27,7 @@ const teamMembers = [
 
 function TeamMember({ member }: TeamMemberProps) {
   return (
-    <div className="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
+    <div className="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src={member.image} alt={member.name} />
 
@@ -52,10 +52,10 @@ function Team() {
     <div id="team">
       <section className="">
         <div className="container px-6 py-10 mx-auto">
-          <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our <span className="text-blue-500">Executive Team</span></h1>
+          <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our <span className="text-primary">Executive Team</span></h1>
 
           <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
+          Meet Our Executive Team: Passionate leaders dedicated to driving our vision forward with expertise and innovation.
           </p>
 
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
