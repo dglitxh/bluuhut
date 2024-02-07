@@ -1,16 +1,25 @@
-import Image from "next/image";
-import Footer from "./Footer";
+
+"use client";
+import Hero from "./components/hero";
+import MainNav from "./components/nav";
+  import Footer from "./Footer";
 import Team from "./Team";
 import Services from "./Services";
+import { Providers } from "./providers";
 
 export default function Home() {
   return (
-    <main className={``}>
-      <div className="">
-        <Services />
+    <Providers>
+      <main className={``}>
+        <div className="">
+          <MainNav />
+          <Hero />
+           <Services />
         <Team />
         <Footer />
-      </div>
-    </main>
+        </div>
+      </main>
+    </Providers>
+
   );
 }
