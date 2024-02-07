@@ -4,7 +4,7 @@ import serviceData from './ServiceData';
 export default function Services() {
   return (
     <div>
-      <section className="container px-6 py-6 mx-auto">
+      <section className="container px-6 py-6 mx-auto max-w-screen-lg">
         <h1 className="text-3xl font-semibold border-l-4 pl-2 capitalize lg:text-4xl border-primary">
           explore our <br></br> awesome <span className="underline decoration-primary">Services</span>
         </h1>

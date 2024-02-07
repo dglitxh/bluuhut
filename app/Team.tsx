@@ -27,7 +27,7 @@ const teamMembers = [
 
 function TeamMember({ member }: TeamMemberProps) {
   return (
-    <div className="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+    <div className="max-w-screen-lg px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src={member.image} alt={member.name} />
 
