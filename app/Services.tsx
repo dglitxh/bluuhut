@@ -15,7 +15,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
           {serviceData.map((service, index) => (
-            <div key={index} className="p-8 space-y-3 border-2 border-blue-400 dark:border-primary rounded-xl">
+            <div key={index} className="p-8 space-y-3 border-2 border-primary dark:border-primary rounded-xl">
               <span className="inline-block text-primary dark:text-primary">
                 {service.icon}
               </span>
