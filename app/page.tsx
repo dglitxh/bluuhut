@@ -2,9 +2,9 @@
 "use client";
 import Hero from "./components/hero";
 import MainNav from "./components/nav";
-  import Footer from "./Footer";
-import Team from "./Team";
-import Services from "./Services";
+  import Footer from "./components/Footer";
+import Team from "./components/Team";
+import Services from "./components/Services";
 import { Providers } from "./providers";
 
 export default function Home() {

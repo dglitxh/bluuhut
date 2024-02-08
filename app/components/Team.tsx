@@ -27,7 +27,7 @@ const teamMembers = [
 
 function TeamMember({ member }: TeamMemberProps) {
   return (
-    <div className="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+    <div className="max-w-screen-xl px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src={member.image} alt={member.name} />
 
@@ -49,12 +49,12 @@ function TeamMember({ member }: TeamMemberProps) {
 
 function Team() {
   return (
-    <div id="team">
+    <div id="">
       <section className="">
-        <div className="container px-6 py-10 mx-auto">
-          <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our <span className="text-primary">Executive Team</span></h1>
+        <div className="container max-w-screen-xl px-6 py-10 mx-auto">
+          <h1 className="text-2xl font-semibold  text-gray-800 capitalize lg:text-3xl dark:text-white">Our <span className="text-primary">Executive Team</span></h1>
 
-          <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+          <p className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
           Meet Our Executive Team: Passionate leaders dedicated to driving our vision forward with expertise and innovation.
           </p>
 
