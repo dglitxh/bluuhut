@@ -6,6 +6,7 @@ import MainNav from "./components/nav";
 import Team from "./components/Team";
 import Services from "./components/Services";
 import { Providers } from "./providers";
+import AboutUs from "./components/AboutUs";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <div className="">
           <MainNav />
           <Hero />
+          <AboutUs />
            <Services />
         <Team />
         <Footer />
