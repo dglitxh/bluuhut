@@ -2,6 +2,7 @@ import React from 'react';
 
 const AboutUs: React.FC = () => {
     return (
+        <div id='about'>
         <div className='mt-5 mb-5 container px-6 py-6 mx-auto max-w-screen-xl'>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
                 <div className="col-span-1 sm:col-span-1">
@@ -20,6 +21,7 @@ const AboutUs: React.FC = () => {
                     <div className="absolute inset-0 bg-black opacity-50 rounded-lg transition duration-300 hover:opacity-0 focus:opacity-0 z-20"></div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

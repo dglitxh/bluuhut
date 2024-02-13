@@ -3,18 +3,13 @@ import pricingData, { PricingPlan } from './pricingData';
 
 function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
     return (
+        <div id='pricing'>
         <div className="rounded-lg text-center overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in">
             <div className="w-full py-5 border-b border-gray-800">
                 <h2 className="font-bold text-3xl text-white">{plan.title}</h2>
                 <h3 className="font-normal text-primary text-xl mt-2">{plan.price}</h3>
             </div>
             <div className="">
-                <div className="my-5">
-                    {plan.icon}
-                    <p className="text-gray-500 text-sm pt-2">
-                        {plan.description}
-                    </p>
-                </div>
                 <div className="leading-8 mb-10 text-lg font-light">
                     <ul>
                         {plan.features.map((feature, index) => (
@@ -22,15 +17,14 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
                         ))}
                     </ul>
                     <div className="w-full mt-10 px-6">
-                        <a
-                            href="#"
-                            className="w-full block bg-gray-900 font-medium text-xl py-4 rounded-xl hover:shadow-lg transition duration-200 ease-in-out hover:bg-primary hover:text-white"
-                        >
-                            Subscribe
-                        </a>
+                    <button className="bg-primary hover:bg-primary text-white font-bold py-2 px-4 rounded w-32 h-10">
+  subscribe
+</button>
+
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
