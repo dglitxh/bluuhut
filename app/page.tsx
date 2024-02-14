@@ -1,11 +1,32 @@
-import Image from "next/image";
+
+"use client";
+import Hero from "./components/hero";
+import MainNav from "./components/nav";
+  import Footer from "./components/Footer";
+import Team from "./components/Team";
+import Services from "./components/Services";
+import { Providers } from "./providers";
+import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
+import Pricing from "./components/Pricing";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        Bluehut
-      </div>
-    </main>
+    <Providers>
+      <main className={``}>
+        <div className="">
+          <MainNav />
+          <Hero />
+          <AboutUs />
+           <Services />
+        <Team />
+
+        <Pricing />
+        <Contact />
+        <Footer />
+        </div>
+      </main>
+    </Providers>
+
   );
 }
