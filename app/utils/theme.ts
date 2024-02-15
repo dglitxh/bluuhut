@@ -2,9 +2,6 @@
 import React, { useEffect } from "react";
 import { useTheme } from "next-themes";
 
-export const ColorModeContext = React.createContext({
-  toggleColorMode: () => {},
-});
 
 export const useColorMode = () => {
   const isDark = false;
