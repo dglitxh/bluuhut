@@ -9,11 +9,14 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Switch,
 } from "@nextui-org/react";
+import { useColorMode } from "../utils/theme";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [activeLink, setActiveLink] = React.useState(0);
+  const colorMdCtx = useColorMode()
 
   type MenuType = {
     [key: string]: string;
@@ -63,6 +66,9 @@ export default function App() {
             Sign Up
           </Button>
         </NavbarItem>
+        <NavbarItem>
+          <Switch onClick={() => colorMdCtx.colorMode.toggleColorMode()}></Switch>
+        </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         {Object.keys(menuItems).map((item, index) => (
@@ -81,6 +87,10 @@ export default function App() {
             </Link>
           </NavbarMenuItem>
         ))}
+         <NavbarMenuItem>
+          {colorMdCtx.getMode()}
+            <Switch onClick={() => colorMdCtx.colorMode.toggleColorMode()}></Switch>
+          </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
