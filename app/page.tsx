@@ -7,6 +7,8 @@ import Team from "./components/Team";
 import Services from "./components/Services";
 import { Providers } from "./providers";
 import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
+import Pricing from "./components/Pricing";
 
 export default function Home() {
   return (
@@ -18,6 +20,9 @@ export default function Home() {
           <AboutUs />
            <Services />
         <Team />
+
+        <Pricing />
+        <Contact />
         <Footer />
         </div>
       </main>
