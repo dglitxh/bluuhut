@@ -1,5 +1,6 @@
 import React from "react";
 import pricingData, { PricingPlan } from "./pricingData";
+import { Button } from "@nextui-org/react";
 
 function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
   return (
@@ -19,9 +20,9 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
               ))}
             </ul>
             <div className="w-full mt-10 px-6">
-              <button className="bg-primary hover:bg-primary text-white font-bold py-2 px-4 rounded w-32 h-10">
+              <Button color="primary" variant="solid">
                 subscribe
-              </button>
+              </Button>
             </div>
           </div>
         </div>
