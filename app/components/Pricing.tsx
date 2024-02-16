@@ -1,5 +1,5 @@
 import React from "react";
-import pricingData, { PricingPlan } from "./pricingData";
+import {pricingData, PricingPlan } from "../utils/data";
 import { Button } from "@nextui-org/react";
 
 function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
