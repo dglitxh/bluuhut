@@ -2,9 +2,6 @@
 import React, { useEffect } from "react";
 import { useTheme } from "next-themes";
 
-export const ColorModeContext = React.createContext({
-  toggleColorMode: () => {},
-});
 
 export const useColorMode = () => {
   const isDark = false;
@@ -22,6 +19,8 @@ export const useColorMode = () => {
     [mode]
   );
 
+  const getMode = () => mode
+
   useEffect(() => {
     const lhmode = localStorage.getItem("mode");
     const w = window.matchMedia("(prefers-color-scheme: dark)");
@@ -30,7 +29,7 @@ export const useColorMode = () => {
     else setMode(w.matches ? "dark" : "light");
   }, []);
   setTheme(mode);
-  return colorMode;
+  return {colorMode, getMode};
 };
 
 export const nextTheme = {

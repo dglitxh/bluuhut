@@ -1,5 +1,5 @@
 import React from 'react';
-import serviceData from './ServiceData';
+import {serviceData} from '../utils/data';
 
 export default function Services() {
   return (
