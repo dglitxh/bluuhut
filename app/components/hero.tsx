@@ -14,10 +14,10 @@ export default function Hero() {
       </h3>
       <br></br>
       <div className="flex gap-4 flex-start">
-        <Button color="primary" variant="solid">
+        <Button href="#pricing" color="primary" variant="solid">
           Get started
         </Button>
-        <Button color="primary" variant="ghost">
+        <Button href="about" color="primary" variant="ghost">
           Learn more
         </Button>
       </div>
