@@ -15,7 +15,6 @@ function Contact() {
           Let us know about your project.
         </p>
       </div>
-      {/* Contact Form */}
       <div className="grid grid-cols-1 md:grid-cols-12">
         <div className="md:col-span-4 p-10">
           <p className="mt-4 text-sm leading-7 font-regular uppercase">
