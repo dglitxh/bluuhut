@@ -9,23 +9,28 @@ const Footer: React.FC = () => {
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bluehut Solutions</span>
           </a>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            <li>
+          <li>
               <a href="#" className="hover:underline me-4 md:me-6">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="hover:underline me-4 md:me-6">
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Privacy Policy
+              <a href="#pricing" className="hover:underline me-4 md:me-6">
+                Pricing
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Licensing
+              <a href="#services" className="hover:underline me-4 md:me-6">
+                Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#contact" className="hover:underline">
                 Contact
               </a>
             </li>

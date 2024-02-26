@@ -36,7 +36,7 @@ function Pricing() {
     <div className="max-w-screen-xl container antialiased w-full h-full text-gray-400 font-inter p-10 mx-auto">
       <div>
         <div id="title" className=" my-10">
-          <h1 className=" text-3xl text-white">
+          <h1 className=" text-3xl ">
             Pricing <span className="text-primary">plans</span>
           </h1>
           <p className="text-light  text-1xl">Here are our pricing plans</p>
