@@ -64,17 +64,14 @@ function Team() {
     <div id="team">
       <div className="">
         <div className="container max-w-screen-xl px-6 py-10 mx-auto">
-          <div className="flex mt-8 mb-8 items-center justify-center p-10 mx-1 md:mx-10 h-96">
-            <blockquote className="relative text-center p-10 w-full m-1 bg-gradient-to-r from-primary to-transparent via-transparent">
-              <span className="absolute top-0 left-0 -ml-8 mt-1 text-primary text-6xl">
-                &ldquo;
-              </span>
-              “If people knew how hard I had to work to gain my mastery, it
-              would not seem so wonderful at all..
-              <cite> - Michelangelo Buonarroti</cite>
-              <span className="absolute bottom-0 right-0 -mr-8 mb-1 text-primary text-6xl">
-                &rdquo;
-              </span>
+
+        <div className="flex mt-8 mb-8 items-center justify-center p-10 mx-1 md:mx-10 h-96">
+            <blockquote className="relative text-white text-center p-10 w-full m-1 bg-gradient-to-r from-primary to-transparent via-transparent">
+                <span className="absolute top-0 left-0 -ml-8 mt-1 text-primary text-6xl">&ldquo;</span>
+                If people knew how hard I had to work to gain my mastery, it would not seem so wonderful at all. 
+                <cite> - Michelangelo Buonarroti</cite>
+                <span className="absolute bottom-0 right-0 -mr-8 mb-1 text-primary text-6xl">&rdquo;</span>
+
             </blockquote>
           </div>
           <h1 className="text-2xl font-semibold  text-gray-800 capitalize lg:text-3xl dark:text-white">

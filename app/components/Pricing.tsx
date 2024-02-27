@@ -1,3 +1,4 @@
+
 import React from "react";
 import {pricingData, PricingPlan } from "../utils/data";
 import { Button } from "@nextui-org/react";
@@ -49,6 +50,6 @@ function Pricing() {
       </div>
     </div>
   );
-}
+          }
 
-export default Pricing;
+export default Pricing
