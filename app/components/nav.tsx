@@ -79,16 +79,16 @@ export default function App() {
           ></Switch>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="flex items-center">
         {Object.keys(menuItems).map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem className="my-3 text-xl" key={`${item}-${index}`}>
             <Link
               color={index + 1 === activeLink ? "primary" : "foreground"}
               className="w-full"
               href={menuItems[item]}
               size="lg"
               onClick={() => {
-                setActiveLink(index + 1);
+                setActiveLink(index + 1);    
                 setIsMenuOpen(false);
               }}
             >
