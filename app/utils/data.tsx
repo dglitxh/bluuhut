@@ -36,7 +36,7 @@ export const pricingData: PricingPlan[] = [
     ],
   },
   {
-    title: "Commercial",
+    title: "Enterprice",
     price: "$100/month",
     features: [
       "Monthly energy audit",

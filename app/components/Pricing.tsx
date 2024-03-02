@@ -1,13 +1,12 @@
-
 import React from "react";
-import {pricingData, PricingPlan } from "../utils/data";
+import { pricingData, PricingPlan } from "../utils/data";
 import { Button } from "@nextui-org/react";
 
 function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
   return (
     <div id="pricing">
-      <div className="rounded-lg text-center overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in">
-        <div className="w-full py-5 border-b border-gray-800">
+      <div className="rounded-lg overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in">
+        <div className="w-full py-5 border-b ">
           <h2 className="font-bold text-3xl">{plan.title}</h2>
           <h3 className="font-normal text-primary text-xl mt-2">
             {plan.price}
@@ -17,11 +16,26 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
           <div className="leading-8 mb-10 text-lg font-light">
             <ul>
               {plan.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
+                <li key={index}>
+                  <svg
+                    className="w-6 h-6 inline-block mr-2 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  {feature}
+                </li>
               ))}
             </ul>
             <div className="w-full mt-10 px-6">
-              <Button color="primary" variant="solid">
+              <Button color="primary" variant="solid" fullWidth>
                 subscribe
               </Button>
             </div>
@@ -34,10 +48,10 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
 
 function Pricing() {
   return (
-    <div className="max-w-screen-xl container antialiased w-full h-full text-gray-400 font-inter p-10 mx-auto">
+    <div className="max-w-screen-xl container antialiased w-full h-full  font-inter p-10 mx-auto">
       <div>
         <div id="title" className=" my-10">
-          <h1 className=" text-3xl text-white">
+          <h1 className=" text-3xl ">
             Pricing <span className="text-primary">plans</span>
           </h1>
           <p className="text-light  text-1xl">Here are our pricing plans</p>
@@ -50,6 +64,6 @@ function Pricing() {
       </div>
     </div>
   );
-          }
+}
 
-export default Pricing
+export default Pricing;
