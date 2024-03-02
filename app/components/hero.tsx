@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import React from "react";
 
 export default function Hero() {
@@ -14,10 +14,10 @@ export default function Hero() {
       </h3>
       <br></br>
       <div className="flex gap-4 flex-start">
-        <Button color="primary" variant="solid">
+        <Button as={Link} href="/#pricing" color="primary" variant="solid">
           Get started
         </Button>
-        <Button color="primary" variant="ghost">
+        <Button as={Link} href="/#about" color="primary" variant="ghost">
           Learn more
         </Button>
       </div>

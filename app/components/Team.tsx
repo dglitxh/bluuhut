@@ -44,13 +44,13 @@ function TeamMember({ member }: TeamMemberProps) {
             {member.name}
           </h1>
 
-          <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+          <p className="mt-2  capitalize  group-hover:text-gray-300">
             {member.role}
           </p>
         </div>
       </div>
 
-      <p className="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+      <p className="mt-4  capitalize  group-hover:text-gray-300">
         {member.description}
       </p>
 
@@ -64,24 +64,21 @@ function Team() {
     <div id="team">
       <div className="">
         <div className="container max-w-screen-xl px-6 py-10 mx-auto">
-          <div className="flex mt-8 mb-8 items-center justify-center p-10 mx-1 md:mx-10 h-96">
+
+        <div className="flex mt-8 mb-8 items-center justify-center p-10 mx-1 md:mx-10 h-96">
             <blockquote className="relative text-center p-10 w-full m-1 bg-gradient-to-r from-primary to-transparent via-transparent">
-              <span className="absolute top-0 left-0 -ml-8 mt-1 text-primary text-6xl">
-                &ldquo;
-              </span>
-              “If people knew how hard I had to work to gain my mastery, it
-              would not seem so wonderful at all..
-              <cite> - Michelangelo Buonarroti</cite>
-              <span className="absolute bottom-0 right-0 -mr-8 mb-1 text-primary text-6xl">
-                &rdquo;
-              </span>
+                <span className="absolute top-0 left-0 -ml-8 mt-1 text-primary text-6xl">&ldquo;</span>
+                If people knew how hard I had to work to gain my mastery, it would not seem so wonderful at all. 
+                <cite> - Michelangelo Buonarroti</cite>
+                <span className="absolute bottom-0 right-0 -mr-8 mb-1 text-primary text-6xl">&rdquo;</span>
+
             </blockquote>
           </div>
           <h1 className="text-2xl font-semibold  text-gray-800 capitalize lg:text-3xl dark:text-white">
             Our <span className="text-primary">Executive Team</span>
           </h1>
 
-          <p className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+          <p className="mt-4  xl:mt-6 ">
             Meet Our Executive Team: Passionate leaders dedicated to driving our
             vision forward with expertise and innovation.
           </p>

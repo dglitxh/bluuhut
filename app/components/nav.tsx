@@ -58,12 +58,9 @@ export default function App() {
         ))}
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+          <Button as={Link} color="primary" href="/#pricing" variant="flat">
+            Get started
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -82,16 +79,16 @@ export default function App() {
           ></Switch>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="flex items-center">
         {Object.keys(menuItems).map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem className="my-3 text-xl" key={`${item}-${index}`}>
             <Link
               color={index + 1 === activeLink ? "primary" : "foreground"}
               className="w-full"
               href={menuItems[item]}
               size="lg"
               onClick={() => {
-                setActiveLink(index + 1);
+                setActiveLink(index + 1);    
                 setIsMenuOpen(false);
               }}
             >
@@ -99,21 +96,6 @@ export default function App() {
             </Link>
           </NavbarMenuItem>
         ))}
-        {/* <NavbarMenuItem>
-          <Switch
-            defaultSelected={colorMdCtx.getMode() === "dark" ? true : false}
-            size="sm"
-            color="secondary"
-            thumbIcon={({ isSelected, className }) =>
-              isSelected ? (
-                <SunIcon className={className} />
-              ) : (
-                <MoonIcon className={className} />
-              )
-            }
-            onClick={() => colorMdCtx.colorMode.toggleColorMode()}
-          ></Switch>
-        </NavbarMenuItem> */}
       </NavbarMenu>
     </Navbar>
   );
