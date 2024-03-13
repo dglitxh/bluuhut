@@ -47,13 +47,16 @@ function Contact(): JSX.Element {
               Feel free to reach out to us for any inquiries or questions you may have. Our team is here to help you with anything you need. We value your feedback and look forward to hearing from you!
             </p>
             <div className="flex items-center mt-5">
-              <span className="text-sm">House #14, Street #12, </span>
+              <span className="text-sm"></span>
             </div>
             <div className="flex items-center mt-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-4 h-4 ml-1">
+                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+              </svg>
               <span className="text-sm">+14376025401</span>
             </div>
             <div className="flex items-center mt-5">
-              <span className="text-sm">24/7</span>
+              <span className="text-sm"></span>
             </div>
           </div>
           <form className="md:col-span-8 p-10" onSubmit={handleSubmit}>
@@ -63,7 +66,7 @@ function Contact(): JSX.Element {
                   First Name
                 </label>
                 <input
-                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none"
+                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none focus:border-primary"
                   type="text"
                   placeholder="Jane"
                   aria-label="First name"
@@ -77,7 +80,7 @@ function Contact(): JSX.Element {
                   Last Name
                 </label>
                 <input
-                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none"
+                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none focus:border-primary"
                   type="text"
                   placeholder="Doe"
                   aria-label="Last name"
@@ -93,7 +96,7 @@ function Contact(): JSX.Element {
                   Email Address
                 </label>
                 <input
-                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none"
+                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none focus:border-primary"
                   type="email"
                   placeholder="jane@exp.com"
                   aria-label="Email address"
@@ -109,7 +112,7 @@ function Contact(): JSX.Element {
                   Your Message
                 </label>
                 <textarea
-                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none"
+                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none focus:border-primary"
                   placeholder="Your message here..."
                   aria-label="Your message"
                   name="message"
