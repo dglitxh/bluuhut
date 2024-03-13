@@ -72,7 +72,7 @@ export const serviceData = [
     ),
     title: "Electrical Solutions:",
     description:
-      "From circuit design to power systems analysis, our electrical engineering team provides comprehensive solutions to meet your electrical needs. Whether youre seeking to optimize energy efficiency, enhance system reliability, or develop cutting-edge electronic devices, we have the expertise to deliver results that exceed your expectations.",
+      "From circuit design to power systems analysis, our electrical  team provides comprehensive solutions to meet your electrical needs. Whether youre seeking to optimize energy efficiency, enhance system reliability, or develop cutting-edge electronic devices, we have the expertise to deliver results that exceed your expectations.",
   },
   {
     icon: (
@@ -93,7 +93,7 @@ export const serviceData = [
     ),
     title: "Telecom Solutions:",
     description:
-      "Our telecom engineering services cover a wide range of specialties, including network design, optimization, and deployment. Whether youre a telecommunications provider, a corporate enterprise, or a government agency, our telecom experts can help you navigate the complexities of modern communication infrastructure to ensure seamless connectivity and reliable performance.",
+      "Our telecom  services cover a wide range of specialties, including network design, optimization, and deployment. Whether youre a telecommunications provider, a corporate enterprise, or a government agency, our telecom experts can help you navigate the complexities of modern communication infrastructure to ensure seamless connectivity and reliable performance.",
   },
   {
     icon: (
@@ -114,7 +114,7 @@ export const serviceData = [
     ),
     title: "Handyman Services:",
     description:
-      "In addition to our specialized engineering offerings, we also provide handyman services for general maintenance and repair work. Whether its fixing leaky faucets, installing shelves, or painting walls, our skilled handymen are ready to tackle a wide range of tasks to keep your property in top condition.",
+      "In addition to our specialized  offerings, we also provide handyman services for general maintenance and repair work. Whether its fixing leaky faucets, installing shelves, or painting walls, our skilled handymen are ready to tackle a wide range of tasks to keep your property in top condition.",
   },
 ];
 
