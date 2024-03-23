@@ -24,7 +24,7 @@ const teamMembers = [
     description:
       "Kaytee, our COO, brings nine years of invaluable experience to our executive team. As a male leader, he is instrumental in optimizing our operational processes to maximize efficiency and productivity. With a track record of streamlining workflows and implementing strategic initiatives, Kaytee plays a crucial role in driving the day-to-day operations of our firm.",
     image:
-      "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
   },
   // Add more team members as needed
 ];
