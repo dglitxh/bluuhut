@@ -54,7 +54,7 @@ function Contact(): JSX.Element {
             </div>
             <div className="flex items-center mt-5">
             <FontAwesomeIcon icon={faPhone}/>
-              <span className="text-sm">+14376025401</span>
+              <span className="text-sm">+1 434 602 5401</span>
             </div>
             <div className="flex items-center mt-5">
               <span className="text-sm"></span>
