@@ -1,5 +1,8 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Button } from '@nextui-org/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+
 
 interface FormData {
   firstName: string;
@@ -47,13 +50,14 @@ function Contact(): JSX.Element {
               Feel free to reach out to us for any inquiries or questions you may have. Our team is here to help you with anything you need. We value your feedback and look forward to hearing from you!
             </p>
             <div className="flex items-center mt-5">
-              <span className="text-sm">House #14, Street #12, </span>
+              <span className="text-sm"></span>
             </div>
             <div className="flex items-center mt-5">
-              <span className="text-sm">+14376025401</span>
+            <FontAwesomeIcon icon={faPhone}/>
+              <span className="text-sm">+1 434 602 5401</span>
             </div>
             <div className="flex items-center mt-5">
-              <span className="text-sm">24/7</span>
+              <span className="text-sm"></span>
             </div>
           </div>
           <form className="md:col-span-8 p-10" onSubmit={handleSubmit}>
@@ -63,7 +67,7 @@ function Contact(): JSX.Element {
                   First Name
                 </label>
                 <input
-                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none"
+                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none focus:border-primary"
                   type="text"
                   placeholder="Jane"
                   aria-label="First name"
@@ -77,7 +81,7 @@ function Contact(): JSX.Element {
                   Last Name
                 </label>
                 <input
-                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none"
+                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none focus:border-primary"
                   type="text"
                   placeholder="Doe"
                   aria-label="Last name"
@@ -93,7 +97,7 @@ function Contact(): JSX.Element {
                   Email Address
                 </label>
                 <input
-                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none"
+                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none focus:border-primary"
                   type="email"
                   placeholder="jane@exp.com"
                   aria-label="Email address"
@@ -109,7 +113,7 @@ function Contact(): JSX.Element {
                   Your Message
                 </label>
                 <textarea
-                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none"
+                  className="appearance-none bg-transparent border-b w-full mr-3 p-4 leading-tight focus:outline-none focus:border-primary"
                   placeholder="Your message here..."
                   aria-label="Your message"
                   name="message"
