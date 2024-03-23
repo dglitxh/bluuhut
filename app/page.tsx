@@ -9,6 +9,9 @@ import { Providers } from "./providers";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Pricing from "./components/Pricing";
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config } from "@fortawesome/fontawesome-svg-core"; 
+config.autoAddCss = false;
 
 export default function Home() {
   return (
