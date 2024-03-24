@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <a href="https://web.facebook.com/profile.php?id=61557453218712" target='_blank' className="text-gray-500 hover:text-primary-500 mx-2">
           <FontAwesomeIcon icon={faFacebook}/>
           </a>
-          <a href="#" className="text-gray-500 hover:text-primary-500 mx-2">
+          <a href="https://www.instagram.com/bluehut.inc/" target='_blank' className="text-gray-500 hover:text-primary-500 mx-2">
           <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a href="#" className="text-gray-500 hover:text-primary-500 mx-2">
