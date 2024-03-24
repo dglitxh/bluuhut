@@ -1,7 +1,8 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Button } from '@nextui-org/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faEnvelopeSquare, faMailBulk, faMailForward, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faMailchimp } from '@fortawesome/free-brands-svg-icons/faMailchimp';
 
 
 interface FormData {
@@ -54,8 +55,11 @@ function Contact(): JSX.Element {
             </div>
             <div className="flex items-center mt-5">
             <FontAwesomeIcon icon={faPhone}/>
-              <span className="text-sm">+1 434 602 5401</span>
+              <span className="text-sm ml-2">+1 434 602 5401</span>
+              
             </div>
+            <FontAwesomeIcon icon={faEnvelope} />
+              <span className='text-sm ml-2'>bluehutsolutions@gmail.com</span>
             <div className="flex items-center mt-5">
               <span className="text-sm"></span>
             </div>
