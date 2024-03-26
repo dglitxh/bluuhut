@@ -59,7 +59,7 @@ function Contact(): JSX.Element {
               
             </div>
             <FontAwesomeIcon icon={faEnvelope} />
-              <span className='text-sm ml-2'>bluehutsolutions@gmail.com</span>
+              <span className='text-sm ml-2'><a href="mailto:bluehutsolutions@gmail.com">bluehutsolutions@gmail.com</a></span>
             <div className="flex items-center mt-5">
               <span className="text-sm"></span>
             </div>
