@@ -8,45 +8,58 @@ export interface PricingPlan {
 
 export const pricingData: PricingPlan[] = [
   {
-    title: "Residential",
-    price: "$25/month",
-    features: [
-      " Energy audit",
-      "Panel inspections",
-      "Safety inspections",
-      "Earth testing",
-      " Leakage tracing",
-      "Continuity test",
-      "Insulation resistance test",
-      "Energy commission approval",
-    ],
-  },
-  {
-    title: "Commercial",
+    title: "Basic",
     price: "$50/month",
     features: [
-      "Monthly energy audit",
-      "Monthly safety inspections",
-      "Panel inspection and upgrades",
-      "Earth testing",
-      "Leakage tracing",
-      "Continuity test",
-      "Insulation resistance test",
-      "Energy commission certification and approval",
+      " two minor repairs/maintenance tasks per month ",
+      "Discounted rates for extra services beyond the the plan",
+     
     ],
   },
   {
-    title: "Enterprice",
+    title: "Standard",
     price: "$100/month",
     features: [
-      "Monthly energy audit",
-      "Monthly safety inspections",
-      "Panel inspection and upgrades",
-      "Earth testing",
-      "Leakage tracing",
-      "Continuity test",
-      "Insulation resistance test",
-      "Energy commission certification and approval",
+      "Four minor repairs/maintenance tasks or one major task per month",
+      "Further discounted rates for additional services",
+  
+     
+    ],
+  },
+  {
+    title: "Premium",
+    price: "$200/month",
+    features: [
+      "Unlimited minor repairs, two major tasks per month",
+      "Lowest rates for any services not covered under the plan",
+    ],
+  },
+  {
+    title: "Custom",
+    price: "",
+    features: [
+      "Tailored for businesses or high-demand clients",
+      "Pricing and services customized based on specific needs and frequency of use",
+
+    ],
+  },
+  {
+    title: "Emergency Services",
+    price: "",
+    features: [
+      "Tailored for businesses or high-demand clients",
+      "Pricing and services customized based on specific needs and frequency of use",
+
+    ],
+  },
+  {
+    title: "Value-Added Services",
+    price: "",
+    features: [
+      "Emergency Services",
+      "Annual Inspections",
+      "Seasonal Maintenance Packages",
+
     ],
   },
 ];
@@ -72,7 +85,7 @@ export const serviceData = [
     ),
     title: "Electrical Solutions:",
     description:
-      "From circuit design to power systems analysis, our electrical  team provides comprehensive solutions to meet your electrical needs. Whether youre seeking to optimize energy efficiency, enhance system reliability, or develop cutting-edge electronic devices, we have the expertise to deliver results that exceed your expectations.",
+      " we provide a wide array of electrical solutions tailored to meet the diverse needs of our clients. Whether you're looking to enhance the energy efficiency of your home, ensure the safety and reliability of your commercial building's electrical system, or require specialized electrical services for large enterprises, our expert team is here to deliver exceptional results. Explore our service offerings and pricing plans designed to suit various requirements.",
   },
   {
     icon: (
