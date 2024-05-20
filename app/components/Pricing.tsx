@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/react";
 function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
   return (
     <div id="pricing">
-      <div className="rounded-lg overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in">
+      <div className="rounded-lg overflow-hidden w-full transform hover:shadow-1xl hover:scale-105 transition duration-100 ease-in">
         <div className="w-full py-5 border-b ">
           <h2 className="font-bold text-3xl">{plan.title}</h2>
           <h3 className="font-normal text-primary text-xl mt-2">
