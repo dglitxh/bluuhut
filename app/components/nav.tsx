@@ -67,7 +67,7 @@ export default function App() {
           <Switch
             defaultSelected
             size="sm"
-            color="secondary"
+            color="primary"
             thumbIcon={({ isSelected, className }) =>
               isSelected ? (
                 <SunIcon className={className} />
