@@ -8,45 +8,58 @@ export interface PricingPlan {
 
 export const pricingData: PricingPlan[] = [
   {
-    title: "Residential",
-    price: "$25/month",
-    features: [
-      " Energy audit",
-      "Panel inspections",
-      "Safety inspections",
-      "Earth testing",
-      " Leakage tracing",
-      "Continuity test",
-      "Insulation resistance test",
-      "Energy commission approval",
-    ],
-  },
-  {
-    title: "Commercial",
+    title: "Basic",
     price: "$50/month",
     features: [
-      "Monthly energy audit",
-      "Monthly safety inspections",
-      "Panel inspection and upgrades",
-      "Earth testing",
-      "Leakage tracing",
-      "Continuity test",
-      "Insulation resistance test",
-      "Energy commission certification and approval",
+      " two minor repairs/maintenance tasks per month ",
+      "Discounted rates for extra services beyond the the plan",
+     
     ],
   },
   {
-    title: "Enterprice",
+    title: "Standard",
     price: "$100/month",
     features: [
-      "Monthly energy audit",
-      "Monthly safety inspections",
-      "Panel inspection and upgrades",
-      "Earth testing",
-      "Leakage tracing",
-      "Continuity test",
-      "Insulation resistance test",
-      "Energy commission certification and approval",
+      "Four minor repairs/maintenance tasks or one major task per month",
+      "Further discounted rates for additional services",
+  
+     
+    ],
+  },
+  {
+    title: "Premium",
+    price: "$200/month",
+    features: [
+      "Unlimited minor repairs, two major tasks per month",
+      "Lowest rates for any services not covered under the plan",
+    ],
+  },
+  {
+    title: "Custom",
+    price: "",
+    features: [
+      "Tailored for businesses or high-demand clients",
+      "Pricing and services customized based on specific needs and frequency of use",
+
+    ],
+  },
+  {
+    title: "Emergency Services",
+    price: "",
+    features: [
+      "Tailored for businesses or high-demand clients",
+      "Pricing and services customized based on specific needs and frequency of use",
+
+    ],
+  },
+  {
+    title: "Value-Added Services",
+    price: "",
+    features: [
+      "Emergency Services",
+      "Annual Inspections",
+      "Seasonal Maintenance Packages",
+
     ],
   },
 ];
