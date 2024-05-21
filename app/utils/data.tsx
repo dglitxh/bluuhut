@@ -85,7 +85,7 @@ export const serviceData = [
     ),
     title: "Electrical Solutions:",
     description:
-      "From circuit design to power systems analysis, our electrical  team provides comprehensive solutions to meet your electrical needs. Whether youre seeking to optimize energy efficiency, enhance system reliability, or develop cutting-edge electronic devices, we have the expertise to deliver results that exceed your expectations.",
+      " we provide a wide array of electrical solutions tailored to meet the diverse needs of our clients. Whether you're looking to enhance the energy efficiency of your home, ensure the safety and reliability of your commercial building's electrical system, or require specialized electrical services for large enterprises, our expert team is here to deliver exceptional results. Explore our service offerings and pricing plans designed to suit various requirements.",
   },
   {
     icon: (
