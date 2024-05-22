@@ -14,11 +14,11 @@ export default function Hero() {
       </h3>
       <br></br>
       <div className="flex gap-4 flex-start">
-        <Button as={Link} href="/#pricing" color="primary" variant="solid">
-          Get started
+        <Button as={Link} href="/#pricing" color="secondary" variant="solid">
+          <h2 className="font-bold text-white">Get started </h2>
         </Button>
-        <Button as={Link} href="/#about" color="primary" variant="ghost">
-          Learn more
+        <Button as={Link} href="/#about" color="secondary" variant="bordered">
+          <h2 className="font-bold text-inherit"> Learn more</h2>
         </Button>
       </div>
     </div>

@@ -7,7 +7,7 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
     <div id="pricing">
       <div className="rounded-lg overflow-hidden w-full transform hover:shadow-1xl hover:scale-105 transition duration-100 ease-in">
         <div className="w-full py-5 border-b ">
-          <h2 className="font-bold text-3xl">{plan.title}</h2>
+          <h2 className="font-bold text-2xl ">{plan.title}</h2>
           <h3 className="font-normal text-primary text-xl mt-2">
             {plan.price}
           </h3>
@@ -34,8 +34,8 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
                 </li>
               ))}
             </ul>
-            <div className="w-full mt-10 px-6">
-              <Button color="primary" variant="solid" fullWidth>
+            <div className="w-full mt-10 px-3">
+              <Button color="secondary" variant="flat">
                 subscribe
               </Button>
             </div>
