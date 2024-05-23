@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <div id='services'>
       <section className="container px-6 py-6 mx-auto max-w-screen-xl">
-        <h1 className="text-2xl font-semibold border-l-4 pl-2 capitalize lg:text-4xl border-primary">
+        <h1 className="text-2xl font-semibold  pl-2 capitalize lg:text-2xl ">
           explore our <br></br> awesome <span className="underline decoration-primary">Services</span>
         </h1>
 
