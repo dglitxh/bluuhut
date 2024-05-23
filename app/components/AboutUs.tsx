@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
                 <div className="col-span-1 sm:col-span-1">
                     <div className="flex items-center">
                         <div className="h-px bg-primary mr-3"></div>
-                        <h2 className="text-2xl font-semibold border-l-4 w-2 pl-2 capitalize lg:text-4xl border-primary">About BlueHut Solutions</h2>
+                        <h2 className="text-2xl font-semibold  pl-2 capitalize lg:text-2xl ">About <br />BlueHut <span className="text-primary">Solutions</span></h2>
                     </div>
                     <div className="flex items-center">
                         

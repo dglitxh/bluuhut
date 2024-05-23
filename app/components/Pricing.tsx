@@ -7,13 +7,13 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
     <div id="pricing">
       <div className="rounded-lg overflow-hidden w-full transform hover:shadow-1xl hover:scale-105 transition duration-100 ease-in">
         <div className="w-full py-5 border-b ">
-          <h2 className="font-bold text-3xl">{plan.title}</h2>
+          <h2 className="font-semibold text-2xl">{plan.title}</h2>
           <h3 className="font-normal text-primary text-xl mt-2">
             {plan.price}
           </h3>
         </div>
         <div className="">
-          <div className="leading-8 mb-10 text-lg font-light">
+          <div className="leading-8 mb-10 text-md font-light">
             <ul>
               {plan.features.map((feature, index) => (
                 <li key={index}>
@@ -51,8 +51,8 @@ function Pricing() {
     <div className="max-w-screen-xl container antialiased w-full h-full  font-inter p-10 mx-auto">
       <div>
         <div id="title" className=" my-10">
-          <h1 className=" text-3xl ">
-            Pricing <span className="text-primary">plans</span>
+          <h1 className="font-semibold text-2xl ">
+            Pricing <span className="text-primary">Plans</span>
           </h1>
           <p className="text-light  text-1xl">Here are our pricing plans</p>
         </div>
