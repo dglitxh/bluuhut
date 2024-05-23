@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { useTheme } from "next-themes";
 
-
 export const useColorMode = () => {
   const isDark = false;
   const userPref = isDark || typeof isDark == undefined ? "dark" : "light";
@@ -19,7 +18,7 @@ export const useColorMode = () => {
     [mode]
   );
 
-  const getMode = () => mode
+  const getMode = () => mode;
 
   useEffect(() => {
     const lhmode = localStorage.getItem("mode");
@@ -29,28 +28,29 @@ export const useColorMode = () => {
     else setMode(w.matches ? "dark" : "light");
   }, []);
   setTheme(mode);
-  return {colorMode, getMode};
+  return { colorMode, getMode };
 };
 
 export const nextTheme = {
   dark: {
     colors: {
-      background: "#0D001A",
+      background: "#00171F",
       foreground: "#ffffff",
       primary: {
-        50: "#3B096C",
+        50: "#cffafe",
         100: "#520F83",
-        200: "#7318A2",
-        300: "#9823C2",
-        400: "#c031e2",
-        500: "#DD62ED",
-        600: "#F182F6",
-        700: "#FCADF9",
-        800: "#FDD5F9",
-        900: "#FEECFE",
-        DEFAULT: "#DD62ED",
+        200: "#a5f3fc",
+        300: "#67e8f9",
+        400: "#22d3ee",
+        500: "#06b6d4",
+        600: "#0891b2",
+        700: "#0e7490",
+        800: "#0e7490",
+        900: "#164e63",
+        DEFAULT: "#00A8E8",
         foreground: "#ffffff",
       },
+      secondary: "#25a18e",
       focus: "#F182F6",
     },
     layout: {
@@ -70,19 +70,20 @@ export const nextTheme = {
   light: {
     colors: {
       primary: {
-        50: "#3B096C",
+        50: "#cffafe",
         100: "#520F83",
-        200: "#7318A2",
-        300: "#9823C2",
-        400: "#c031e2",
-        500: "#DD62ED",
-        600: "#F182F6",
-        700: "#FCADF9",
-        800: "#FDD5F9",
-        900: "#FEECFE",
-        DEFAULT: "#DD62ED",
+        200: "#a5f3fc",
+        300: "#67e8f9",
+        400: "#22d3ee",
+        500: "#06b6d4",
+        600: "#0891b2",
+        700: "#0e7490",
+        800: "#0e7490",
+        900: "#164e63",
+        DEFAULT: "#0369a1",
         foreground: "#ffffff",
       },
+      secondary: "#25a18e",
       focus: "#F182F6",
     },
   },

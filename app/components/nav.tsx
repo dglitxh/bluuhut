@@ -59,7 +59,7 @@ export default function App() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="/#pricing" variant="flat">
+
             Get started
           </Button>
         </NavbarItem>
