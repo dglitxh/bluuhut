@@ -59,7 +59,7 @@ export default function App() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="secondary" href="/#pricing" variant="flat">
+
             Get started
           </Button>
         </NavbarItem>
@@ -88,7 +88,7 @@ export default function App() {
               href={menuItems[item]}
               size="lg"
               onClick={() => {
-                setActiveLink(index + 1);
+                setActiveLink(index + 1);    
                 setIsMenuOpen(false);
               }}
             >
