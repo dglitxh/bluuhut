@@ -34,8 +34,8 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
                 </li>
               ))}
             </ul>
-            <div className="w-full mt-10 px-6">
-              <Button color="primary" variant="solid" fullWidth>
+            <div className="w-full mt-10 px-3">
+              <Button color="secondary" variant="flat">
                 subscribe
               </Button>
             </div>
