@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { useTheme } from "next-themes";
 
-
 export const useColorMode = () => {
   const isDark = false;
   const userPref = isDark || typeof isDark == undefined ? "dark" : "light";
@@ -19,7 +18,7 @@ export const useColorMode = () => {
     [mode]
   );
 
-  const getMode = () => mode
+  const getMode = () => mode;
 
   useEffect(() => {
     const lhmode = localStorage.getItem("mode");
@@ -29,7 +28,7 @@ export const useColorMode = () => {
     else setMode(w.matches ? "dark" : "light");
   }, []);
   setTheme(mode);
-  return {colorMode, getMode};
+  return { colorMode, getMode };
 };
 
 export const nextTheme = {
@@ -51,6 +50,7 @@ export const nextTheme = {
         DEFAULT: "#00A8E8",
         foreground: "#ffffff",
       },
+      secondary: "#25a18e",
       focus: "#F182F6",
     },
     layout: {
@@ -83,6 +83,7 @@ export const nextTheme = {
         DEFAULT: "#0369a1",
         foreground: "#ffffff",
       },
+      secondary: "#25a18e",
       focus: "#F182F6",
     },
   },
