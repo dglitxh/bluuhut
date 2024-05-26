@@ -51,10 +51,10 @@ function Pricing() {
     <div className="max-w-screen-xl container antialiased w-full h-full  font-inter p-10 mx-auto">
       <div>
         <div id="title" className=" my-10">
-          <h1 className="font-semibold text-2xl ">
+          <h1 className="font-semibold text-3xl ">
             Pricing <span className="text-primary">Plans</span>
           </h1>
-          <p className="text-light  text-1xl">Here are our pricing plans</p>
+          <p className="text-light  ">Here are our pricing plans</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-evenly gap-10 pt-10">
           {pricingData.map((plan, index) => (

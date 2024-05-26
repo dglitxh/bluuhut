@@ -7,8 +7,8 @@ const AboutUs: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
                 <div className="col-span-1 sm:col-span-1">
                     <div className="flex items-center">
-                        <div className="h-px bg-primary mr-3"></div>
-                        <h2 className="text-2xl font-semibold  pl-2 capitalize lg:text-2xl ">About <br />BlueHut <span className="text-primary">Solutions</span></h2>
+                        <div className="h-px bg-primary "></div>
+                        <h2 className="text-3xl font-semibold  capitalize lg:text-3xl ">About <br />BlueHut <span className="text-primary">Solutions</span></h2>
                     </div>
                     <div className="flex items-center">
                         

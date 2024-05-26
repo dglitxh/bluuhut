@@ -74,7 +74,7 @@ function Team() {
 
             </blockquote>
           </div>
-          <h1 className="text-2xl font-semibold   capitalize lg:text-2xl ">
+          <h1 className="text-3xl font-semibold   capitalize lg:text-3xl ">
             Our <span className="text-primary">Executive Team</span>
           </h1>
 
