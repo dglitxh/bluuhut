@@ -21,13 +21,13 @@ export default function Services() {
           {serviceData.map((service, index) => (
             <div
               key={index}
-              className="p-8 space-y-3 border-2 border-primary dark:border-primary rounded-xl"
+              className="p-8 space-y-3 border-2 border-gray-700  rounded-xl"
             >
               <span className="inline-block text-secondary dark:text-secondary">
                 {service.icon}
               </span>
 
-              <h1 className="text-2xl font-semibold  capitalize dark:text-white">
+              <h1 className="text-2xl font-semibold  capitalize text-primary">
                 {service.title}
               </h1>
 
