@@ -5,9 +5,8 @@ export default function Services() {
   return (
     <div id="services">
       <section className="container px-6 py-6 mx-auto max-w-screen-xl">
-        <h1 className="text-2xl font-semibold border-l-4 pl-2 capitalize lg:text-4xl border-primary">
-          explore our <br></br> awesome{" "}
-          <span className="underline decoration-primary">Services</span>
+        <h1 className="text-3xl font-semibold  capitalize lg:text-3xl">
+          explore our <br></br> awesome <span className="text-primary">Services</span>
         </h1>
 
         <p className="mt-4 xl:mt-6 ">
@@ -22,13 +21,13 @@ export default function Services() {
           {serviceData.map((service, index) => (
             <div
               key={index}
-              className="p-8 space-y-3 border-2 border-primary dark:border-primary rounded-xl"
+              className="p-8 space-y-3 border-2 border-gray-700  rounded-xl"
             >
               <span className="inline-block text-secondary dark:text-secondary">
                 {service.icon}
               </span>
 
-              <h1 className="text-2xl font-semibold  capitalize dark:text-white">
+              <h1 className="text-2xl font-semibold  capitalize text-primary">
                 {service.title}
               </h1>
 

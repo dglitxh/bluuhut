@@ -93,7 +93,8 @@ function Contact(): JSX.Element {
 
         <div className="grid grid-cols-1 md:grid-cols-12">
           <div className="md:col-span-4 p-10">
-            <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
+          
+            <h3 className="text-3xl sm:text-2xl leading-normal font-semibold ">
               Get In <span className="text-primary">Touch</span>
             </h3>
             <p className="mt-4 leading-7">

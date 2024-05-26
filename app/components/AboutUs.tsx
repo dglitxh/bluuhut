@@ -7,8 +7,8 @@ const AboutUs: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
                 <div className="col-span-1 sm:col-span-1">
                     <div className="flex items-center">
-                        <div className="h-px bg-primary mr-3"></div>
-                        <h2 className="text-2xl font-semibold border-l-4 w-2 pl-2 capitalize lg:text-4xl border-primary">About BlueHut Solutions</h2>
+                        <div className="h-px bg-primary "></div>
+                        <h2 className="text-3xl font-semibold  capitalize lg:text-3xl ">About <br />BlueHut <span className="text-primary">Solutions</span></h2>
                     </div>
                     <div className="flex items-center">
                         
@@ -16,9 +16,9 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
                 <div className="col-span-1 relative sm:col-span-1">
-                    <div className="w-full h-full absolute bg-gray-300 z-0"></div>
-                    <img src="img2.jpg" alt="Engineering Team" className="w-full h-auto rounded-lg relative z-10" />
-                    <div className="absolute inset-0 bg-black opacity-50 rounded-lg transition duration-300 hover:opacity-0 focus:opacity-0 z-20"></div>
+    
+                    <img src="img.svg" alt="Engineering Team" className="" />
+                
                 </div>
             </div>
         </div>
