@@ -16,9 +16,9 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
                 <div className="col-span-1 relative sm:col-span-1">
-                    <div className="w-full h-full absolute bg-gray-300 z-0"></div>
-                    <img src="img2.jpg" alt="Engineering Team" className="w-full h-auto rounded-lg relative z-10" />
-                    <div className="absolute inset-0 bg-black opacity-50 rounded-lg transition duration-300 hover:opacity-0 focus:opacity-0 z-20"></div>
+    
+                    <img src="img.svg" alt="Engineering Team" className="" />
+                
                 </div>
             </div>
         </div>
