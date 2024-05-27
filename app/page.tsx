@@ -15,7 +15,7 @@ config.autoAddCss = false;
 export default function Home() {
   return (
     <Providers>
-      <main className={` container max-w-screen-lg mx-auto `}>
+      <main className={` container max-w-screen-xl mx-auto `}>
         <div className="">
           <MainNav />
           <Hero />
