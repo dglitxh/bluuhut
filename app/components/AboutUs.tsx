@@ -12,7 +12,7 @@ const AboutUs: React.FC = () => {
                     </div>
                     <div className="flex items-center">
                         
-                        <p className="mt-4">Welcome to BlueHut Engineering, a dedicated technical firm specializing in innovative solutions to complex challenges. Our skilled professionals excel at every project stage, from conceptual design to implementation. We prioritize quality, efficiency, and client satisfaction, tackling large-scale infrastructure projects, cutting-edge technology developments, and intricate system integrations. Our commitment to excellence drives us to exceed expectations and deliver superior results. Join us in transforming ideas into reality with impactful and sustainable solutions.</p>
+                        <p className="mt-4">Welcome to BlueHut Solutions, a dedicated technical firm specializing in innovative solutions to complex challenges. Our skilled professionals excel at every project stage, from conceptual design to implementation. We prioritize quality, efficiency, and client satisfaction, tackling large-scale infrastructure projects, cutting-edge technology developments, and intricate system integrations. Our commitment to excellence drives us to exceed expectations and deliver superior results. Join us in transforming ideas into reality with impactful and sustainable solutions.</p>
                     </div>
                 </div>
                 <div className="col-span-1 relative sm:col-span-1">
