@@ -6,6 +6,8 @@ export interface PricingPlan {
   features: string[];
 }
 
+export const siteUrl = "bluehutsolutions.ca"
+
 export const pricingData: PricingPlan[] = [
   {
     title: "Basic",
