@@ -11,6 +11,8 @@ import {
 import { faMailchimp } from "@fortawesome/free-brands-svg-icons/faMailchimp";
 import emailjs from "@emailjs/browser";
 import MyModal from "./MyModal";
+import { httpReq } from "../utils/helpers";
+import { siteUrl } from "../utils/data";
 
 interface FormData {
   firstName: string;
@@ -49,41 +51,30 @@ function Contact(): JSX.Element {
 
   const form: any = useRef();
 
-  const sendEmail = (e: FormEvent<HTMLElement>) => {
+  const sendEmail = async (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
     setLoading(true);
+    try {
+      let req = await httpReq("POST", "../api/sendmail", formData);
+      let res = req.json();
+      console.log(res, "abakade");
+    } catch (error: any) {
+      setColor("red");
+      setLoading(false);
+      setInfo({
+        heading: "Warning",
+        text: "there was an error sending message, please try again",
+      });
 
-    emailjs
-      .sendForm(
-        "service_0qphaay",
-        "template_b1li0gl",
-        form?.current,
-        "user_fFuOQJJYwhlEjAlrIakxr"
-      )
-      .then(
-        (result: any) => {
-          setLoading(false);
-          setInfo({ heading: "Success", text: "Message sent succesfully" });
-          setColor("success");
-          handler();
-          console.log(result.text, "message sent!");
-        },
-        (error: any) => {
-          setLoading(false);
-          setInfo({
-            heading: "Warning",
-            text: "there was an error sending message, please try again",
-          });
-          setColor("error");
-          handler();
-          console.log(error.text, "failed to send message");
-        }
-      );
+      handler();
+      console.log(error.text, "failed to send message");
+    }
+    setLoading(false);
   };
 
   const handleSubmit = (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
-    sendEmail(e)
+    sendEmail(e);
   };
 
   return (
@@ -93,7 +84,6 @@ function Contact(): JSX.Element {
 
         <div className="grid grid-cols-1 md:grid-cols-12">
           <div className="md:col-span-4 p-10">
-          
             <h3 className="text-3xl sm:text-2xl leading-normal font-semibold ">
               Get In <span className="text-primary">Touch</span>
             </h3>
@@ -110,7 +100,7 @@ function Contact(): JSX.Element {
               <span className="text-sm ml-2">+1 434 602 5401</span>
             </div>
             <FontAwesomeIcon icon={faEnvelope} />
-              <span className='text-sm ml-2'>bluehutsolutions@gmail.com</span>
+            <span className="text-sm ml-2">bluehutsolutions@gmail.com</span>
             <div className="flex items-center mt-5">
               <span className="text-sm"></span>
             </div>
@@ -206,14 +196,19 @@ function Contact(): JSX.Element {
                   <span className="text-sm">Send me your newsletter!</span>
                 </label>
               </div>
-              <Button color="primary" variant="solid" type="submit" onSubmit={(e) => handleSubmit(e) }>
+              <Button
+                color="primary"
+                variant="solid"
+                type="submit"
+                onSubmit={(e) => handleSubmit(e)}
+              >
                 {loading ? <Spinner color={"default"} size="sm" /> : "Submit"}
               </Button>
             </div>
           </form>
         </div>
       </div>
-      <MyModal onClose={close} isOpen={visible} msg={info}/>
+      <MyModal onClose={close} isOpen={visible} info={info} color={color} />
     </div>
   );
 }
