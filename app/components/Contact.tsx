@@ -46,11 +46,10 @@ function Contact(): JSX.Element {
     e.preventDefault();
     setLoading(true);
     try {
-      let req = await httpReq("POST", "../api/sendmail", formData);
-      let res = req.json();
-      console.log(res, "abakade");
+      let req = await httpReq("POST", "../api/sendmail", JSON.stringify(formData));
+      console.log(req, "abakade");
     } catch (error: any) {
-      setColor("red");
+      setColor("red-600");
       setLoading(false);
       setInfo({
         heading: "Warning",
