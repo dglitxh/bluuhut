@@ -16,14 +16,14 @@ export const httpReq = async (type: string, url: string, data: Object) => {
       res = req.json();
     } else if (type === "POST" || type === "PUT") {
       config["body"] = JSON.stringify(data);
-      console.log(config, "helper");
+      console.log(config);
       const req = await fetch(url, config);
       res = req.json();
     }
     console.log(res, "helper");
     return res;
   } catch (e) {
-    console.log(e, "helper");
+    console.log(e, "helper err");
     return e;
   }
 };
