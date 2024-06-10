@@ -1,15 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
-import { Button, Spinner } from "@nextui-org/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faEnvelopeSquare,
-  faMailBulk,
-  faMailForward,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import { faMailchimp } from "@fortawesome/free-brands-svg-icons/faMailchimp";
-import emailjs from "@emailjs/browser";
+import { Button, Spinner } from "@nextui-org/react";;
+import { PhoneIcon, MailIcon } from "./icons";
 import MyModal from "./MyModal";
 import { httpReq } from "../utils/helpers";
 import { siteUrl } from "../utils/data";
@@ -96,10 +87,10 @@ function Contact(): JSX.Element {
               <span className="text-sm"></span>
             </div>
             <div className="flex items-center mt-5">
-              <FontAwesomeIcon icon={faPhone} />
+              <PhoneIcon/>
               <span className="text-sm ml-2">+1 434 602 5401</span>
             </div>
-            <FontAwesomeIcon icon={faEnvelope} />
+              <MailIcon/>
             <span className="text-sm ml-2">bluehutsolutions@gmail.com</span>
             <div className="flex items-center mt-5">
               <span className="text-sm"></span>
