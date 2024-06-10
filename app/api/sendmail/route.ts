@@ -8,24 +8,30 @@ const mg = Mailgun({
 });
 
 export function POST(req: NextRequest, res: NextResponse) {
-  let data = req.body;
-  console.log(data, "data", req.url);
+  let data = req.json();
+  console.log(data);
+
   const deets = {
-    from: "Mailgun Sandbox <postmaster@mail.bluehutsolutions.ca>",
+    from: "Bluehut App <postmaster@mail.bluehutsolutions.ca>",
     to: "ydglitch@gmail.com",
     subject: "Hello",
     text: `$`,
     html: `<h1>$</h1>`,
   };
-  mg.messages().send(deets, function (error: any, body: any) {
-    console.log(body);
-    res = body;
+  try {
+    mg.messages().send(deets, function (error: any, body: any) {
+      console.log(body);
+      res = body;
 
-    if (error) {
-      console.log(error);
-    }
-    return error;
-  });
+      if (error) {
+        let e = new Error(String(error));
+        throw e;
+      }
+    });
+  } catch (err) {
+    console.log(err);
+    return err;
+  }
 
   return Response.json(res);
 }
