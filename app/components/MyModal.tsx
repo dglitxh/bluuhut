@@ -26,12 +26,8 @@ export default function MyModal(props: any) {
               <p>{info["text"]}</p>
             </ModalBody>
             <ModalFooter>
-              <Button
-                color={props.color}
-                variant="light"
-                onClick={props.onClose}
-              >
-                Close
+              <Button color={props.color} onClick={props.onClose}>
+                <h5 className="text-white">Close</h5>
               </Button>
             </ModalFooter>
           </>
