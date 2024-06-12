@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
-import { Button, Spinner } from "@nextui-org/react";;
+import { Button, Spinner } from "@nextui-org/react";
 import { PhoneIcon, MailIcon } from "./icons";
 import MyModal from "./MyModal";
 import { httpReq } from "../utils/helpers";
@@ -46,10 +46,22 @@ function Contact(): JSX.Element {
     e.preventDefault();
     setLoading(true);
     try {
-      let req = await httpReq("POST", "../api/sendmail", JSON.stringify(formData));
-      console.log(req, "abakade");
+      let status = await httpReq(
+        "POST",
+        "../api/sendmail",
+        JSON.stringify(formData)
+      );
+      if (status <= 201) console.log("message sent");
+      else throw new Error("message not sent");
+      setLoading(false);
+      setInfo({
+        heading: "Info",
+        text: "Message was sent succesfully!",
+      });
+      setColor("primary");
+      handler();
     } catch (error: any) {
-      setColor("red-600");
+      setColor("warning");
       setLoading(false);
       setInfo({
         heading: "Warning",
@@ -64,7 +76,17 @@ function Contact(): JSX.Element {
 
   const handleSubmit = (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
-    sendEmail(e);
+    const re =
+      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!re.test(formData.email)) {
+      setColor("warning");
+      setInfo({
+        heading: "Warning",
+        text: "Enter a valid email and try again!",
+      });
+      handler();
+      return;
+    } else sendEmail(e);
   };
 
   return (
@@ -86,13 +108,13 @@ function Contact(): JSX.Element {
               <span className="text-sm"></span>
             </div>
             <div className="flex items-center mt-5">
-              <PhoneIcon/>
+              <PhoneIcon />
               <span className="text-sm ml-2">+1 434 602 5401</span>
             </div>
-              <MailIcon/>
-            <span className="text-sm ml-2">bluehutsolutions@gmail.com</span>
+
             <div className="flex items-center mt-5">
-              <span className="text-sm"></span>
+              <MailIcon />
+              <span className="text-sm ml-2">bluehutsolutions@gmail.com</span>
             </div>
           </div>
           <form
