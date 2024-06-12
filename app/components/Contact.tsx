@@ -3,8 +3,6 @@ import { Button, Spinner } from "@nextui-org/react";
 import { PhoneIcon, MailIcon } from "./icons";
 import MyModal from "./MyModal";
 import { httpReq } from "../utils/helpers";
-import { siteUrl } from "../utils/data";
-import MyModal from "./MyModal";
 
 
 interface FormData {
