@@ -51,6 +51,7 @@ export const nextTheme = {
         foreground: "#ffffff",
       },
       secondary: "#25a18e",
+      warning: "#d00000",
       focus: "#F182F6",
     },
     layout: {
@@ -84,6 +85,7 @@ export const nextTheme = {
         foreground: "#ffffff",
       },
       secondary: "#25a18e",
+      warning: "#d00000",
       focus: "#F182F6",
     },
   },

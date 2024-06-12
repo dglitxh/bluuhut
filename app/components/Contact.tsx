@@ -1,16 +1,11 @@
 import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
 import { Button, Spinner } from "@nextui-org/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faEnvelopeSquare,
-  faMailBulk,
-  faMailForward,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import { faMailchimp } from "@fortawesome/free-brands-svg-icons/faMailchimp";
-import emailjs from "@emailjs/browser";
+import { PhoneIcon, MailIcon } from "./icons";
 import MyModal from "./MyModal";
+import { httpReq } from "../utils/helpers";
+import { siteUrl } from "../utils/data";
+import MyModal from "./MyModal";
+
 
 interface FormData {
   firstName: string;
@@ -49,41 +44,53 @@ function Contact(): JSX.Element {
 
   const form: any = useRef();
 
-  const sendEmail = (e: FormEvent<HTMLElement>) => {
+  const sendEmail = async (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
     setLoading(true);
-
-    emailjs
-      .sendForm(
-        "service_0qphaay",
-        "template_b1li0gl",
-        form?.current,
-        "user_fFuOQJJYwhlEjAlrIakxr"
-      )
-      .then(
-        (result: any) => {
-          setLoading(false);
-          setInfo({ heading: "Success", text: "Message sent succesfully" });
-          setColor("success");
-          handler();
-          console.log(result.text, "message sent!");
-        },
-        (error: any) => {
-          setLoading(false);
-          setInfo({
-            heading: "Warning",
-            text: "there was an error sending message, please try again",
-          });
-          setColor("error");
-          handler();
-          console.log(error.text, "failed to send message");
-        }
+    try {
+      let status = await httpReq(
+        "POST",
+        "../api/sendmail",
+        JSON.stringify(formData)
       );
+      if (status <= 201) console.log("message sent");
+      else throw new Error("message not sent");
+      setLoading(false);
+      setInfo({
+        heading: "Info",
+        text: "Message was sent succesfully!",
+      });
+      setColor("primary");
+      handler();
+    } catch (error: any) {
+      setColor("warning");
+      setLoading(false);
+      setInfo({
+        heading: "Warning",
+        text: "there was an error sending message, please try again",
+      });
+
+      handler();
+      console.log(error.text, "failed to send message");
+    }
+    setLoading(false);
   };
 
   const handleSubmit = (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
-    sendEmail(e)
+    const re =
+      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!re.test(formData.email)) {
+      setColor("warning");
+      setInfo({
+        heading: "Warning",
+        text: "Enter a valid email and try again!",
+      });
+      handler();
+      return;
+    } else sendEmail(e);
+
+
   };
 
   return (
@@ -93,7 +100,7 @@ function Contact(): JSX.Element {
 
         <div className="grid grid-cols-1 md:grid-cols-12">
           <div className="md:col-span-4 p-10">
-            <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
+            <h3 className="text-3xl sm:text-2xl leading-normal font-semibold ">
               Get In <span className="text-primary">Touch</span>
             </h3>
             <p className="mt-4 leading-7">
@@ -105,13 +112,12 @@ function Contact(): JSX.Element {
               <span className="text-sm"></span>
             </div>
             <div className="flex items-center mt-5">
-              <FontAwesomeIcon icon={faPhone} />
+              <PhoneIcon />
               <span className="text-sm ml-2">+1 434 602 5401</span>
             </div>
-            <FontAwesomeIcon icon={faEnvelope} />
-              <span className='text-sm ml-2'>bluehutsolutions@gmail.com</span>
             <div className="flex items-center mt-5">
-              <span className="text-sm"></span>
+              <MailIcon />
+              <span className="text-sm ml-2">bluehutsolutions@gmail.com</span>
             </div>
           </div>
           <form
@@ -205,14 +211,22 @@ function Contact(): JSX.Element {
                   <span className="text-sm">Send me your newsletter!</span>
                 </label>
               </div>
-              <Button color="primary" variant="solid" type="submit" onSubmit={(e) => handleSubmit(e) }>
+
+              <Button
+                color="primary"
+                variant="solid"
+                type="submit"
+                onSubmit={(e) => handleSubmit(e)}
+              >
+
                 {loading ? <Spinner color={"default"} size="sm" /> : "Submit"}
               </Button>
             </div>
           </form>
         </div>
       </div>
-      <MyModal onClose={close} isOpen={visible} msg={info}/>
+
+      <MyModal onClose={close} isOpen={visible} info={info} color={color} />
     </div>
   );
 }
