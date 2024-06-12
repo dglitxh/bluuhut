@@ -4,6 +4,8 @@ import { PhoneIcon, MailIcon } from "./icons";
 import MyModal from "./MyModal";
 import { httpReq } from "../utils/helpers";
 import { siteUrl } from "../utils/data";
+import MyModal from "./MyModal";
+
 
 interface FormData {
   firstName: string;
@@ -87,6 +89,8 @@ function Contact(): JSX.Element {
       handler();
       return;
     } else sendEmail(e);
+
+
   };
 
   return (
@@ -111,7 +115,6 @@ function Contact(): JSX.Element {
               <PhoneIcon />
               <span className="text-sm ml-2">+1 434 602 5401</span>
             </div>
-
             <div className="flex items-center mt-5">
               <MailIcon />
               <span className="text-sm ml-2">bluehutsolutions@gmail.com</span>
@@ -208,18 +211,21 @@ function Contact(): JSX.Element {
                   <span className="text-sm">Send me your newsletter!</span>
                 </label>
               </div>
+
               <Button
                 color="primary"
                 variant="solid"
                 type="submit"
                 onSubmit={(e) => handleSubmit(e)}
               >
+
                 {loading ? <Spinner color={"default"} size="sm" /> : "Submit"}
               </Button>
             </div>
           </form>
         </div>
       </div>
+
       <MyModal onClose={close} isOpen={visible} info={info} color={color} />
     </div>
   );

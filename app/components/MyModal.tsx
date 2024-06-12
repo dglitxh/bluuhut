@@ -14,6 +14,7 @@ export default function MyModal(props: any) {
   const [backdrop, setBackdrop] = React.useState("opaque");
 
   let info = props.info;
+
   return (
     <>
       <Modal backdrop={"blur"} isOpen={props.isOpen} onClose={props.onClose}>
@@ -31,6 +32,7 @@ export default function MyModal(props: any) {
               </Button>
             </ModalFooter>
           </>
+
         </ModalContent>
       </Modal>
     </>

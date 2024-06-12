@@ -5,8 +5,10 @@ export default function Services() {
   return (
     <div id="services">
       <section className="container px-6 py-6 mx-auto max-w-screen-xl">
+
         <h1 className="text-3xl font-semibold  capitalize lg:text-3xl">
           explore our <br></br> awesome <span className="text-primary">Services</span>
+
         </h1>
 
         <p className="mt-4 xl:mt-6 ">

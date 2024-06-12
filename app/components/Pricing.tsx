@@ -8,6 +8,7 @@ function PricingPlanComponent({ plan }: { plan: PricingPlan }) {
       <div className="rounded-lg overflow-hidden w-full transform hover:shadow-1xl hover:scale-105 transition duration-100 ease-in">
         <div className="w-full py-5 border-b ">
           <h2 className="font-semibold text-2xl">{plan.title}</h2>
+
           <h3 className="font-normal text-primary text-xl mt-2">
             {plan.price}
           </h3>
