@@ -12,17 +12,25 @@ export const httpReq = async (type: string, url: string, data: string) => {
   try {
     if (type === "GET" || type === "DELETE") {
       const req = await fetch(url, config);
-      res = await req.json();
+      res = await req.text();
+      if (req.status <= 201) {
+        console.log(res);
+      } else {
+        throw new Error();
+      }
     } else if (type === "POST" || type === "PUT") {
       config["body"] = data;
       const req = await fetch(url, config);
-      res = await req.json();
-
-      console.log(res, "helper");
+      res = await req.text();
+      if (req.status <= 201) {
+        console.log(res);
+      } else {
+        throw new Error();
+      }
     }
-    return res;
+    return 200;
   } catch (e) {
     console.log(e, "helper err");
-    throw new Error();
+    return 400;
   }
 };
