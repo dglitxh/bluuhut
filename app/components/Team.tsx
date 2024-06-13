@@ -14,7 +14,7 @@ const teamMembers = [
     name: "Raphael Kwadwo Aninakwa",
     role: "Managing Director (MD)",
     description:
-      "Raphael Kwadwo Aninakwa is the dynamic leader at the helm of our company`s` journey. With over seven years of invaluable experience in [industry/field], he brings a wealth of knowledge and a visionary outlook to our team. Raphael is dedicated to propelling our company forward with innovation, strategic direction, and a steadfast commitment to excellence.",
+      "Raphael Kwadwo Aninakwa is the dynamic leader at the helm of our company's journey. With over seven years of invaluable experience in the technical field, he brings a wealth of knowledge and a visionary outlook to our team. Raphael is dedicated to propelling our company forward with innovation, strategic direction, and a steadfast commitment to excellence.",
     image:
       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
   },
