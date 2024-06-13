@@ -139,6 +139,7 @@ function Contact(): JSX.Element {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleInputChange}
+                  required
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
@@ -156,6 +157,7 @@ function Contact(): JSX.Element {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleInputChange}
+                  required
                 />
               </div>
             </div>
@@ -175,6 +177,7 @@ function Contact(): JSX.Element {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
+                  required
                 />
               </div>
             </div>
@@ -193,6 +196,7 @@ function Contact(): JSX.Element {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
+                  required
                 ></textarea>
               </div>
             </div>
@@ -205,6 +209,7 @@ function Contact(): JSX.Element {
                     name="subscribe"
                     checked={formData.subscribe}
                     onChange={handleInputChange}
+                    required
                   />
                   <span className="text-sm">Send me your newsletter!</span>
                 </label>

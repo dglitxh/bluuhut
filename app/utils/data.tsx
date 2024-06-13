@@ -11,7 +11,7 @@ export const siteUrl = "bluehutsolutions.ca"
 export const pricingData: PricingPlan[] = [
   {
     title: "Basic",
-    price: "$50/month",
+    price: "$65/month",
     features: [
       " two minor repairs/maintenance tasks per month ",
       "Discounted rates for extra services beyond the the plan",
@@ -20,7 +20,7 @@ export const pricingData: PricingPlan[] = [
   },
   {
     title: "Standard",
-    price: "$100/month",
+    price: "$115/month",
     features: [
       "Four minor repairs/maintenance tasks or one major task per month",
       "Further discounted rates for additional services",
@@ -30,7 +30,7 @@ export const pricingData: PricingPlan[] = [
   },
   {
     title: "Premium",
-    price: "$200/month",
+    price: "$215/month",
     features: [
       "Unlimited minor repairs, two major tasks per month",
       "Lowest rates for any services not covered under the plan",
@@ -108,7 +108,7 @@ export const serviceData = [
     ),
     title: "Telecom Solutions:",
     description:
-      "Our telecom  services cover a wide range of specialties, including network design, optimization, and deployment. Whether youre a telecommunications provider, a corporate enterprise, or a government agency, our telecom experts can help you navigate the complexities of modern communication infrastructure to ensure seamless connectivity and reliable performance.",
+      "Our telecom  services cover a wide range of specialties, including network design, optimization, and deployment. Whether you're a telecommunications provider, a corporate enterprise, or a government agency, our telecom experts can help you navigate the complexities of modern communication infrastructure to ensure seamless connectivity and reliable performance.",
   },
   {
     icon: (
