@@ -8,24 +8,24 @@ import { Providers } from "./providers";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Pricing from "./components/Pricing";
+import Industries from "./components/Industries";
+import Process from "./components/Process";
 
 export default function Home() {
   return (
     <Providers>
-      <main className={` container max-w-screen-xl mx-auto `}>
-
-        <div className="">
-          <MainNav />
-          <Hero />
-          <AboutUs />
-          <Services />
-          <Team />
-
-          <Pricing />
-          <Contact />
-          <Footer />
-        </div>
+      <MainNav />
+      <main>
+        <Hero />
+        <AboutUs />
+        <Services />
+        <Industries />
+        <Process />
+        <Team />
+        <Pricing />
+        <Contact />
       </main>
+      <Footer />
     </Providers>
   );
 }
