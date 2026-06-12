@@ -146,7 +146,7 @@ export interface PricingPlan {
 export const pricingData: PricingPlan[] = [
   {
     title: "Basic",
-    price: "$50",
+    price: "$65",
     period: "/month",
     description: "Essential cover for small homes and light upkeep.",
     features: [
@@ -158,7 +158,7 @@ export const pricingData: PricingPlan[] = [
   },
   {
     title: "Standard",
-    price: "$100",
+    price: "$115",
     period: "/month",
     description: "Balanced cover for active households and small offices.",
     features: [
@@ -171,7 +171,7 @@ export const pricingData: PricingPlan[] = [
   },
   {
     title: "Premium",
-    price: "$200",
+    price: "$215",
     period: "/month",
     description: "Comprehensive cover for demanding properties.",
     features: [
