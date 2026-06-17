@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +11,8 @@
 /* ------------------------------------------------------------------ */
 
 :root {
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --paper: 244 246 248; /* #F4F6F8 — cool light canvas */
   --surface: 255 255 255; /* #FFFFFF — elevated cards / panels */
   --sand: 236 239 243; /* #ECEFF3 — alternating band */

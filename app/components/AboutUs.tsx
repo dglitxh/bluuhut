@@ -49,7 +49,7 @@ const AboutUs: React.FC = () => {
             <figure className="flex h-full flex-col justify-between rounded-2xl bg-accent p-9 text-white shadow-accent sm:p-10">
               <blockquote>
                 <span className="mono text-[0.625rem] font-medium uppercase tracking-[0.2em] text-white/60">
-                  // Operating principle
+                  {"// Operating principle"}
                 </span>
                 <p className="mt-4 display text-2xl font-medium leading-snug">
                   We don&rsquo;t just complete projects, we engineer outcomes
