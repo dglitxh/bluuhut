@@ -19,7 +19,7 @@ export default function MyModal(props: any) {
       radius="none"
       classNames={{
         base: "border border-line",
-        header: "font-serif text-xl text-ink",
+        header: "display text-xl text-ink",
         body: "text-ink-soft",
       }}
     >
@@ -33,9 +33,9 @@ export default function MyModal(props: any) {
           </ModalBody>
           <ModalFooter>
             <Button
-              radius="none"
+              radius="full"
               onClick={props.onClose}
-              className="bg-ink px-6 text-xs font-semibold uppercase tracking-[0.14em] text-paper"
+              className="bg-accent px-6 text-xs font-semibold uppercase tracking-[0.14em] text-white"
             >
               Close
             </Button>

@@ -13,22 +13,28 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       colors: {
-        // Editorial light palette
-        paper: "#F6F4EF",
+        // Light engineering palette — cool surfaces, emerald accent
+        paper: "#F4F6F8",
         surface: "#FFFFFF",
-        sand: "#EDE8DE",
+        sand: "#ECEFF3",
         ink: {
-          DEFAULT: "#0E1C24",
-          soft: "#2F4049",
+          DEFAULT: "#0B1620",
+          soft: "#34434E",
         },
-        muted: "#63727A",
+        muted: "#64748B",
         accent: {
-          DEFAULT: "#1452CC",
-          ink: "#103A8C",
+          DEFAULT: "#059669",
+          ink: "#047857",
+          bright: "#059669",
         },
+      },
+      boxShadow: {
+        soft: "0 1px 2px rgba(11,22,32,0.05), 0 1px 3px rgba(11,22,32,0.04)",
+        card: "0 2px 8px rgba(11,22,32,0.06), 0 8px 24px rgba(11,22,32,0.05)",
+        float: "0 8px 24px rgba(11,22,32,0.08), 0 24px 56px rgba(11,22,32,0.08)",
       },
       borderRadius: {
         none: "0",

@@ -24,7 +24,7 @@ export const serviceData: Service[] = [
     ),
     title: "Electrical Solutions",
     description:
-      "End-to-end electrical engineering for residential, commercial, and industrial environments — designed for energy efficiency, safety, and code compliance.",
+      "Safe, code-compliant electrical engineering for homes, businesses, and industry.",
     capabilities: [
       "Power distribution & panel upgrades",
       "Lighting & energy-efficiency retrofits",
@@ -42,7 +42,7 @@ export const serviceData: Service[] = [
     ),
     title: "Telecom & Networks",
     description:
-      "Design, optimization, and deployment of modern communication infrastructure for providers, enterprises, and public agencies.",
+      "Modern communication infrastructure, designed and deployed end to end.",
     capabilities: [
       "Structured cabling & fiber",
       "Network design & optimization",
@@ -57,7 +57,7 @@ export const serviceData: Service[] = [
     ),
     title: "Facility & Handyman",
     description:
-      "Skilled general maintenance and repair that keeps your property running — from preventative upkeep to rapid fixes.",
+      "Skilled upkeep and repairs that keep your property running.",
     capabilities: [
       "Preventative maintenance plans",
       "Installations & fittings",
@@ -86,19 +86,19 @@ export const industries = [
 export const valueProps = [
   {
     title: "Licensed & insured",
-    desc: "Fully certified technicians and comprehensive coverage on every job.",
+    desc: "Certified technicians and full coverage on every job.",
   },
   {
     title: "Engineered to standard",
-    desc: "Work executed to code with rigorous quality assurance at each stage.",
+    desc: "Work to code, quality-checked at every stage.",
   },
   {
     title: "Rapid response",
-    desc: "24/7 emergency support and dependable scheduling you can plan around.",
+    desc: "24/7 emergency support and dependable scheduling.",
   },
   {
     title: "Transparent pricing",
-    desc: "Clear, upfront quotes with no surprises — fixed plans or custom scopes.",
+    desc: "Clear, upfront quotes, no surprises.",
   },
 ];
 
@@ -110,22 +110,22 @@ export const processSteps = [
   {
     step: "01",
     title: "Consult & assess",
-    desc: "We listen, inspect the site, and define scope, risks, and objectives together.",
+    desc: "We inspect the site and define scope together.",
   },
   {
     step: "02",
     title: "Design & quote",
-    desc: "A clear engineering plan with transparent pricing and a realistic timeline.",
+    desc: "A clear plan with upfront pricing and a timeline.",
   },
   {
     step: "03",
     title: "Build & deploy",
-    desc: "Certified technicians execute to code with continuous quality checks.",
+    desc: "Certified techs execute to code, quality-checked.",
   },
   {
     step: "04",
     title: "Support & maintain",
-    desc: "Ongoing maintenance and 24/7 response keep your systems running.",
+    desc: "Ongoing upkeep and 24/7 response keep you running.",
   },
 ];
 
@@ -146,9 +146,9 @@ export interface PricingPlan {
 export const pricingData: PricingPlan[] = [
   {
     title: "Basic",
-    price: "$65",
+    price: "CAD $65",
     period: "/month",
-    description: "Essential cover for small homes and light upkeep.",
+    description: "Essential cover for small homes.",
     features: [
       "Two minor repairs / maintenance tasks per month",
       "Discounted rates on additional services",
@@ -158,9 +158,9 @@ export const pricingData: PricingPlan[] = [
   },
   {
     title: "Standard",
-    price: "$115",
+    price: "CAD $115",
     period: "/month",
-    description: "Balanced cover for active households and small offices.",
+    description: "Balanced cover for busy households and small offices.",
     features: [
       "Four minor tasks or one major task per month",
       "Further discounted rates on extra work",
@@ -171,7 +171,7 @@ export const pricingData: PricingPlan[] = [
   },
   {
     title: "Premium",
-    price: "$215",
+    price: "CAD $215",
     period: "/month",
     description: "Comprehensive cover for demanding properties.",
     features: [
@@ -184,8 +184,7 @@ export const pricingData: PricingPlan[] = [
   {
     title: "Custom & Enterprise",
     price: "Let's talk",
-    description:
-      "Tailored programs for businesses, high-demand clients, and multi-site portfolios.",
+    description: "Tailored programs for businesses and multi-site portfolios.",
     features: [
       "Scoped to your frequency and SLAs",
       "Emergency services & annual inspections",
