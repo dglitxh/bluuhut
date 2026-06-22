@@ -13,13 +13,13 @@ const teamMembers: Member[] = [
     name: "Raphael Kwadwo Aninakwa",
     role: "Managing Director",
     description:
-      "Raphael leads BlueHut’s strategic direction with over a decade of experience across electrical and telecom engineering. He sets the standard for technical rigour, safety, and the long-term reliability our clients depend on.",
+      "A decade across electrical and telecom engineering, setting the standard for technical rigour and safety.",
   },
   {
-    name: "Kaytee",
+    name: "Kwaku Ntiri",
     role: "Chief Operations Officer",
     description:
-      "Kaytee oversees day-to-day delivery, bringing nine years of operations experience to scheduling, quality assurance, and field execution. He keeps every project on scope, on budget, and on time.",
+      "Nine years in operations, keeping every project on scope, on budget, and on time.",
   },
 ];
 
@@ -36,17 +36,17 @@ function TeamMember({ member, index }: { member: Member; index: number }) {
   return (
     <Reveal
       delay={index * 0.08}
-      className="group flex flex-col border-b border-line py-9 md:[&:nth-child(odd)]:border-r md:[&:nth-child(odd)]:pr-10 md:[&:nth-child(even)]:pl-10"
+      className="glass group flex flex-col rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1"
     >
       <div className="flex items-center gap-5">
-        <span className="flex h-16 w-16 flex-none items-center justify-center bg-ink font-serif text-xl font-semibold text-paper">
+        <span className="mono flex h-16 w-16 flex-none items-center justify-center rounded-xl bg-accent text-lg font-medium tracking-wide text-white">
           {monogram(member.name)}
         </span>
         <div>
-          <h3 className="font-serif text-xl font-semibold text-ink">
+          <h3 className="display text-xl font-semibold text-ink">
             {member.name}
           </h3>
-          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-accent-bright">
             {member.role}
           </p>
         </div>
@@ -60,21 +60,24 @@ function TeamMember({ member, index }: { member: Member; index: number }) {
 
 export default function Team() {
   return (
-    <section id="team" className="border-b border-line bg-sand py-20 sm:py-28">
-      <div className="mx-auto max-w-screen-xl px-6">
+    <section
+      id="team"
+      className="mesh relative overflow-hidden border-b border-line py-20 sm:py-28"
+    >
+      <div className="orb orb-ink left-[-10rem] bottom-[-4rem] h-[26rem] w-[26rem] opacity-35" aria-hidden />
+      <div className="relative mx-auto max-w-screen-xl px-6">
         <SectionHeading
-          index="05 / 06"
           eyebrow="Leadership"
           title={
             <>
               The people{" "}
-              <span className="italic text-accent">accountable for the work.</span>
+              <span className="text-accent-bright">accountable for the work.</span>
             </>
           }
-          description="A hands-on leadership team that stays close to every engagement — from first scope to final commissioning."
+          description="A hands-on team that stays close to every engagement."
         />
 
-        <div className="mt-14 grid grid-cols-1 border-t border-line md:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2">
           {teamMembers.map((member, index) => (
             <TeamMember key={member.name} member={member} index={index} />
           ))}

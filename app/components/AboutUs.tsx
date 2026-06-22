@@ -1,39 +1,37 @@
 import React from "react";
 import Reveal from "./Reveal";
-import SectionHeading from "./SectionHeading";
 import { valueProps } from "../utils/data";
 
 const AboutUs: React.FC = () => {
   return (
-    <section id="about" className="relative border-b border-line py-20 sm:py-28">
-      <div className="mx-auto max-w-screen-xl px-6">
+    <section className="mesh relative overflow-hidden border-b border-line py-20 sm:py-28">
+      <div className="orb orb-accent right-[-12rem] top-0 h-[30rem] w-[30rem] opacity-30" aria-hidden />
+      <div className="relative mx-auto max-w-screen-xl px-6">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
           {/* Copy */}
           <div className="lg:col-span-7">
-            <SectionHeading
-              index="01 / 06"
-              eyebrow="About BlueHut"
-              title={
-                <>
-                  An engineering partner built for{" "}
-                  <span className="italic text-accent">complex, critical work.</span>
-                </>
-              }
-              description="We are a multidisciplinary engineering firm delivering reliable solutions from conceptual design through implementation. Our teams pair deep technical expertise with an uncompromising commitment to safety, quality, and on-time delivery."
-            />
+            <Reveal>
+              <div className="rule-accent" />
+              <h2 className="mt-6 display text-3xl font-semibold leading-[1.08] tracking-tighter text-ink sm:text-4xl">
+                An engineering partner built for{" "}
+                <span className="text-accent-bright">complex, critical work.</span>
+              </h2>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-soft sm:text-lg">
+                We deliver reliable engineering from concept through
+                implementation, pairing deep technical expertise with an
+                uncompromising commitment to safety and on-time delivery.
+              </p>
+            </Reveal>
 
             <Reveal delay={0.1}>
-              <dl className="mt-12 grid grid-cols-1 border-t border-line sm:grid-cols-2">
+              <dl className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {valueProps.map((v, i) => (
-                  <div
-                    key={v.title}
-                    className="border-b border-line py-6 sm:odd:border-r sm:odd:pr-8 sm:even:pl-8"
-                  >
+                  <div key={v.title} className="glass rounded-xl p-6">
                     <div className="flex items-baseline gap-3">
-                      <span className="index-num text-xs font-semibold text-accent">
+                      <span className="index-num text-xs font-semibold text-accent-bright">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <dt className="font-serif text-lg font-semibold text-ink">
+                      <dt className="display text-lg font-semibold text-ink">
                         {v.title}
                       </dt>
                     </div>
@@ -46,20 +44,20 @@ const AboutUs: React.FC = () => {
             </Reveal>
           </div>
 
-          {/* Editorial pull-quote + metrics */}
+          {/* Pull-quote + metrics — solid cobalt accent block */}
           <Reveal delay={0.15} className="lg:col-span-5">
-            <figure className="flex h-full flex-col justify-between bg-ink p-9 text-paper sm:p-10">
+            <figure className="flex h-full flex-col justify-between rounded-2xl bg-accent p-9 text-white shadow-accent sm:p-10">
               <blockquote>
-                <span className="font-serif text-5xl leading-none text-accent" aria-hidden>
-                  “
+                <span className="mono text-[0.625rem] font-medium uppercase tracking-[0.2em] text-white/60">
+                  {"// Operating principle"}
                 </span>
-                <p className="mt-3 font-serif text-2xl font-medium leading-snug">
-                  We don’t just complete projects — we engineer outcomes our
+                <p className="mt-4 display text-2xl font-medium leading-snug">
+                  We don&rsquo;t just complete projects, we engineer outcomes
                   clients rely on for years.
                 </p>
               </blockquote>
 
-              <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden border-t border-white/15 pt-8">
+              <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden border-t border-white/20 pt-8">
                 {[
                   { k: "12+", v: "Years experience" },
                   { k: "850+", v: "Projects delivered" },
@@ -67,10 +65,10 @@ const AboutUs: React.FC = () => {
                   { k: "24/7", v: "Emergency support" },
                 ].map((m) => (
                   <div key={m.v} className="py-1">
-                    <dt className="font-serif text-3xl font-semibold text-paper">
+                    <dt className="mono text-3xl font-medium text-white">
                       {m.k}
                     </dt>
-                    <dd className="mt-1 text-xs uppercase tracking-[0.12em] text-white/55">
+                    <dd className="mt-1 text-xs uppercase tracking-[0.12em] text-white/70">
                       {m.v}
                     </dd>
                   </div>

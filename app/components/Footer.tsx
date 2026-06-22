@@ -2,12 +2,12 @@ import React from "react";
 import { InstagramIcon, TwitterIcon, FacebookIcon } from "./icons";
 
 const nav = [
-  { label: "About", href: "#about" },
-  { label: "Capabilities", href: "#services" },
-  { label: "Industries", href: "#industries" },
-  { label: "Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Capabilities", href: "/#services" },
+  { label: "Industries", href: "/#industries" },
+  { label: "Process", href: "/#process" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Footer: React.FC = () => {
@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           {/* Brand */}
           <div className="lg:col-span-5">
-            <a href="#" className="flex items-center" aria-label="BlueHut Solutions">
-              <span className="font-serif text-xl font-semibold tracking-tight text-ink">
+            <a href="/" className="flex items-center" aria-label="BlueHut Solutions">
+              <span className="display text-xl font-semibold tracking-tight text-ink">
                 BlueHut Solutions
               </span>
             </a>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center border border-line text-ink-soft transition-colors hover:border-ink hover:text-accent"
+                  className="flex h-9 w-9 items-center justify-center border border-line text-ink-soft transition-colors hover:border-ink hover:text-accent-bright"
                 >
                   <Icon />
                 </a>
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
 
           {/* Sitemap */}
           <div className="lg:col-span-3 lg:col-start-7">
-            <h3 className="text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-muted">
+            <h3 className="mono text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-muted">
               Navigate
             </h3>
             <ul className="mt-5 space-y-3">
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-ink-soft transition-colors hover:text-accent"
+                    className="text-sm text-ink-soft transition-colors hover:text-accent-bright"
                   >
                     {item.label}
                   </a>
@@ -67,17 +67,17 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div className="lg:col-span-3">
-            <h3 className="text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-muted">
+            <h3 className="mono text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-muted">
               Contact
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-ink-soft">
               <li>
-                <a href="tel:+14346025401" className="hover:text-accent">
+                <a href="tel:+14346025401" className="hover:text-accent-bright">
                   +1 434 602 5401
                 </a>
               </li>
               <li>
-                <a href="mailto:bluehutsolutions@gmail.com" className="hover:text-accent">
+                <a href="mailto:bluehutsolutions@gmail.com" className="hover:text-accent-bright">
                   bluehutsolutions@gmail.com
                 </a>
               </li>
@@ -90,8 +90,8 @@ const Footer: React.FC = () => {
           <p className="text-xs text-muted">
             © {new Date().getFullYear()} BlueHut Solutions. All rights reserved.
           </p>
-          <p className="text-xs uppercase tracking-[0.16em] text-muted">
-            Engineering · Telecom · Infrastructure
+          <p className="mono text-xs uppercase tracking-[0.14em] text-muted">
+            Engineering / Telecom / Infrastructure
           </p>
         </div>
       </div>
