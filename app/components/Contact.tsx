@@ -1,8 +1,10 @@
+"use client";
 import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
 import { Spinner } from "@nextui-org/react";
 import { PhoneIcon, MailIcon } from "./icons";
 import MyModal from "./MyModal";
 import { httpReq } from "../utils/helpers";
+import { img, images } from "../utils/images";
 
 interface FormData {
   firstName: string;
@@ -13,9 +15,9 @@ interface FormData {
 }
 
 const inputClass =
-  "w-full border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/70 transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
+  "w-full rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/70 transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
 const labelClass =
-  "mb-2 block text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-muted";
+  "mono mb-2 block text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-muted";
 
 function Contact(): JSX.Element {
   const [formData, setFormData] = useState<FormData>({
@@ -60,7 +62,7 @@ function Contact(): JSX.Element {
       setLoading(false);
       setInfo({
         heading: "Message sent",
-        text: "Thanks for reaching out — we’ll be in touch shortly.",
+        text: "Thanks for reaching out, we’ll be in touch shortly.",
       });
       setColor("primary");
       handler();
@@ -94,39 +96,51 @@ function Contact(): JSX.Element {
   };
 
   return (
-    <section id="contact" className="border-b border-line bg-ink py-20 text-paper sm:py-28">
-      <div className="mx-auto max-w-screen-xl px-6">
+    <section
+      id="contact"
+      className="relative overflow-hidden border-y border-line bg-paper py-20 sm:py-28"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.14]"
+        style={{ backgroundImage: `url(${img(images.network, 2000, 70)})` }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/85 to-paper"
+        aria-hidden
+      />
+      <div className="orb orb-accent left-[-12rem] top-[-4rem] h-[32rem] w-[32rem] opacity-35" aria-hidden />
+      <div className="relative mx-auto max-w-screen-xl px-6">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
           {/* Left: invitation + direct contact */}
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3">
-              <span className="index-num text-[0.6875rem] font-semibold tracking-[0.15em] text-white/50">
-                07 / 07
-              </span>
-              <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-accent-foreground">
-                <span className="text-[#7fa3eb]">Get in touch</span>
-              </span>
-            </div>
-            <h2 className="mt-5 max-w-md font-serif text-3xl font-semibold leading-[1.1] tracking-tighter sm:text-4xl">
-              Let’s scope your next project.
+            <span className="mono inline-flex items-center rounded-full border border-accent-soft bg-accent-soft px-3 py-1.5 text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-accent-bright">
+              Get in touch
+            </span>
+            <h2 className="mt-5 max-w-md display text-3xl font-semibold leading-[1.1] tracking-tighter text-ink sm:text-4xl">
+              Let&rsquo;s scope your next project.
             </h2>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-white/70">
-              Tell us what you’re planning. Our team responds to every enquiry —
-              typically within one business day.
+            <p className="mt-5 max-w-md text-base leading-relaxed text-soft">
+              Tell us what you&rsquo;re planning. We respond to every enquiry,
+              usually within one business day.
             </p>
 
-            <dl className="mt-10 space-y-5 border-t border-white/15 pt-8">
-              <div className="flex items-center gap-3 text-white/85">
-                <PhoneIcon />
-                <a href="tel:+14346025401" className="text-sm hover:text-white">
+            <dl className="mt-10 space-y-5 border-t border-line pt-8">
+              <div className="flex items-center gap-3 text-ink-soft">
+                <span className="text-accent-bright">
+                  <PhoneIcon />
+                </span>
+                <a href="tel:+14346025401" className="text-sm hover:text-accent-bright">
                   +1 434 602 5401
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-white/85">
-                <MailIcon />
+              <div className="flex items-center gap-3 text-ink-soft">
+                <span className="text-accent-bright">
+                  <MailIcon />
+                </span>
                 <a
                   href="mailto:bluehutsolutions@gmail.com"
-                  className="text-sm hover:text-white"
+                  className="text-sm hover:text-accent-bright"
                 >
                   bluehutsolutions@gmail.com
                 </a>
@@ -137,7 +151,7 @@ function Contact(): JSX.Element {
           {/* Right: form on light surface */}
           <div className="lg:col-span-7">
             <form
-              className="bg-paper p-7 text-ink sm:p-9"
+              className="glass-strong rounded-2xl p-7 text-ink sm:p-9"
               onSubmit={handleSubmit}
               ref={form}
             >
@@ -221,7 +235,7 @@ function Contact(): JSX.Element {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="inline-flex items-center justify-center gap-2 bg-ink px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-paper transition-colors hover:bg-accent disabled:opacity-70"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-accent-ink disabled:opacity-70"
                 >
                   {loading ? (
                     <Spinner color="default" size="sm" />

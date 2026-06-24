@@ -5,31 +5,38 @@ import { processSteps } from "../utils/data";
 
 export default function Process() {
   return (
-    <section id="process" className="border-b border-line py-20 sm:py-28">
-      <div className="mx-auto max-w-screen-xl px-6">
+    <section
+      id="process"
+      className="mesh relative overflow-hidden border-b border-line py-20 sm:py-28"
+    >
+      <div
+        className="orb orb-ink left-[-10rem] bottom-0 h-[28rem] w-[28rem] opacity-40"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-screen-xl px-6">
         <SectionHeading
-          index="04 / 06"
+          index="03 / 04"
           eyebrow="How We Work"
           title={
             <>
-              A disciplined process from{" "}
-              <span className="italic text-accent">first call to handover.</span>
+              From first call to{" "}
+              <span className="text-accent-bright">handover.</span>
             </>
           }
-          description="Every engagement follows the same four stages, so you always know what happens next and what it costs."
+          description="Four clear stages, so you always know what's next and what it costs."
         />
 
-        <div className="mt-14 grid grid-cols-1 border-t border-line sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((step, index) => (
             <Reveal
               key={step.step}
               delay={index * 0.08}
-              className="relative border-b border-line py-9 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(odd)]:pr-8 sm:[&:nth-child(even)]:pl-8 lg:border-r lg:px-8 lg:last:border-r-0 lg:first:pl-0"
+              className="glass relative rounded-2xl p-7 transition-transform duration-300 hover:-translate-y-1"
             >
-              <span className="font-serif text-5xl font-semibold text-sand [text-shadow:none] lg:text-6xl">
-                <span className="text-ink/15">{step.step}</span>
+              <span className="mono text-5xl font-medium text-accent-bright/40 lg:text-6xl">
+                {step.step}
               </span>
-              <h3 className="mt-5 font-serif text-xl font-semibold text-ink">
+              <h3 className="mt-5 display text-xl font-semibold text-ink">
                 {step.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
