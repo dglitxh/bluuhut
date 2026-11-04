@@ -77,8 +77,8 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:bluehutsolutions@gmail.com" className="hover:text-accent-bright">
-                  bluehutsolutions@gmail.com
+                <a href="mailto:info@bluehutsolutions.ca" className="hover:text-accent-bright">
+                  info@bluehutsolutions.ca
                 </a>
               </li>
               <li className="text-muted">Canada</li>
