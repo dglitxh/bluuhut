@@ -139,10 +139,10 @@ function Contact(): JSX.Element {
                   <MailIcon />
                 </span>
                 <a
-                  href="mailto:bluehutsolutions@gmail.com"
+                  href="mailto:info@bluehutsolutions.ca"
                   className="text-sm hover:text-accent-bright"
                 >
-                  bluehutsolutions@gmail.com
+                  info@bluehutsolutions.ca
                 </a>
               </div>
             </dl>
