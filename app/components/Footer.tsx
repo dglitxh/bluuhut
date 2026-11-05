@@ -30,7 +30,6 @@ const Footer: React.FC = () => {
               {[
                 { Icon: InstagramIcon, href: "https://www.instagram.com/bluehut.inc/", label: "Instagram" },
                 { Icon: FacebookIcon, href: "https://web.facebook.com/profile.php?id=61557453218712", label: "Facebook" },
-                { Icon: TwitterIcon, href: "#", label: "Twitter" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
